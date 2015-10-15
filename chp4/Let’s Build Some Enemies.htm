@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html style="" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <!-- InstanceEndEditable -->
+  <link rel="shortcut icon" href="http://japan.unity3d.com/resources/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="http://japan.unity3d.com/resources/favicons/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon.png">
+
+  <!-- META -->
+  <meta name="description" content="Unity は、Windows と OS X 上で動作する統合型のゲーム開発環境です。iOS、Android、Windows、Mac OS X、Web、Wii U、PlayStation3、Xbox 360 など様々なプラットフォームへ向けた高度な 3D アプリケーションを制作することが出来ます。">
+  <meta name="author" content="Unity Technologies">
+  <meta property="og:title" content="Unity: 統合ゲーム開発環境">
+  <meta property="og:type" content="company">
+  <meta property="og:url" content="http://japan.unity3d.com/">
+  <meta property="og:image" content="http://japan.unity3d.com/resources/favicons/fb-icon.png">
+  <meta property="og:description" content="Unity は、スマートフォンや PC、Webブラウザ、コンシューマ機上でハイクオリティーなゲームを実現する開発プラットフォームです。">
+  <meta property="og:site_name" content="Unity Japan 公式サイト">
+
+  <!-- ASSETS -->
+  <script src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/ga.js" async="" type="text/javascript"></script><script src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/jquery_002.js" type="text/javascript"></script>
+  <script type="text/javascript" src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/unity-core.js"></script>
+  <link rel="stylesheet" type="text/css" href="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/core.css">
+  <link rel="stylesheet" type="text/css" href="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/resp.css">
+  <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/resources/stylesheets/ie.css" /><![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://unity3d.com/news.rss">
+  <!-- InstanceBeginEditable name="header" -->
+    <script type="text/javascript" src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/jquery.js"></script>
+  <!-- InstanceEndEditable -->
+  <link rel="stylesheet" type="text/css" href="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/index.css">
+  <link rel="stylesheet" type="text/css" href="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/jp.css">
+  <link rel="stylesheet" type="text/css" href="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/prettify.css">
+  <link rel="stylesheet" type="text/css" href="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/style.css">
+  <script type="text/javascript" src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/prettify.js"></script>
+  
+  <script type="text/javascript">
+    function addClass(){
+        $(".source-code pre").addClass("prettyprint");
+    }
+  </script>
+  <title>Let’s Build Some Enemies</title>
+</head>
+<body class="developer-document" onload="addClass();prettyPrint()">
+  <div id="master-wrapper">
+  <div class="background"></div>
+  <header id="master-header" class="master-header" role="main-header">
+    <div class="header-wrapper">
+      <div class="lang">
+        <div class="lbl animate" data-values="lang-selector|width|105|1">言語を切り替え</div>
+        <div class="flag flag-jp current tt" data-distance="38|28|bottom"><div class="tip">日本語</div></div>
+        <div id="lang-selector" class="lang-selector">
+          <div class="flag flag-en tt" data-distance="38|28|bottom"><a href="http://unity3d.com/"></a><div class="tip">English</div></div>
+          <div class="flag flag-cn tt" data-distance="38|28|bottom"><a href="http://china.unity3d.com/"></a><div class="tip">中文</div></div>
+          <div class="flag flag-es tt" data-distance="38|28|bottom"><a href="http://spanish.unity3d.com/"></a><div class="tip">Español</div></div>
+          <div class="flag flag-kr tt" data-distance="38|28|bottom"><a href="http://www.unity3dkorea.com/"></a><div class="tip">한국어</div></div>
+          <div class="flag flag-pt tt" data-distance="38|28|bottom"><a href="http://portuguese.unity3d.com/"></a><div class="tip">Portugués</div></div>
+          <div class="flag flag-ru tt" data-distance="38|28|bottom"><a href="http://russia.unity3d.com/"></a><div class="tip">Pусский</div></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <nav class="top-nav">
+        <ul>
+          <li class="tn-icon"><a href="http://japan.unity3d.com/">Home</a></li>
+          <li class="tn-unity"><a href="http://japan.unity3d.com/unity">Unity</a></li>
+          <li class="tn-gallery"><a href="http://japan.unity3d.com/gallery">Gallery</a></li>
+          <li class="tn-store"><a href="http://japan.unity3d.com/store">Store</a></li>
+          <li class="tn-assetstore"><a href="http://japan.unity3d.com/asset-store">Asset Store</a></li>
+          <li class="tn-developer selected"><a href="http://japan.unity3d.com/developer">Developer</a></li>
+          <li class="tn-company"><a href="http://japan.unity3d.com/company">Company</a></li>
+          <li class="tn-download"><a href="http://japan.unity3d.com/unity/download">Download</a></li>
+        </ul>
+      </nav>
+      <nav class="sub-nav">
+        <ul id="sn-unity" style="display:none;">
+          <li class="sn-unity-workflow jp"><a href="http://japan.unity3d.com/unity/workflow">ワークフロー</a></li>
+          <li class="sn-unity-quality jp"><a href="http://japan.unity3d.com/unity/quality">クオリティー</a></li>
+          <li class="sn-unity-mecanim"><a href="http://japan.unity3d.com/unity/mecanim">Mecanim</a></li>
+          <li class="sn-unity-performance jp"><a href="http://japan.unity3d.com/unity/performance">パフォーマンス</a></li>
+          <li class="sn-unity-multiplatform jp"><a href="http://japan.unity3d.com/unity/multiplatform">マルチプラットフォーム</a></li>
+          <li class="sn-unity-collaboration jp"><a href="http://japan.unity3d.com/unity/collaboration">コラボレーション</a></li>
+          <li class="sn-unity-whatsnew jp"><a href="http://japan.unity3d.com/unity/whats-new">アップデート情報</a></li>
+        </ul>
+        <ul id="sn-gallery" style="display:none;">
+          <li class="sn-gallery-madewith"><a href="http://japan.unity3d.com/gallery/made-with-unity/game-list">Made With Unity</a></li>
+          <li class="sn-gallery-demos"><a href="http://japan.unity3d.com/gallery/demos">Demos By Unity</a></li>
+        </ul>
+        <ul id="sn-assetstore" style="display:none;">
+          <li class="sn-assetstore-browse"><a href="https://www.assetstore.unity3d.com/" target="_blank">ブラウズ</a></li>
+          <li class="sn-assetstore-onlineservices jp"><a href="http://japan.unity3d.com/asset-store/online-services">オンラインサービス</a></li>
+          <li class="sn-assetstore-submit jp"><a href="http://japan.unity3d.com/asset-store/submit-content">コンテンツ提出</a></li>
+        </ul>
+        <ul id="sn-developer">
+          <li class="sn-developer-document jp selected"><a href="http://japan.unity3d.com/developer/document">ドキュメント</a></li>
+          <li class="sn-developer-resource jp"><a href="http://japan.unity3d.com/developer/resource">リソース</a></li>
+        </ul>
+        <ul id="sn-community" style="display:none;">
+          <li class="sn-community-forum jp"><a href="http://forum.unity3d.com/" target="_blank">フォーラム</a></li>
+          <li class="sn-community-answers jp"><a href="http://answers.unity3d.com/" target="_blank">アンサー</a></li>
+          <li class="sn-community-feedback jp"><a href="http://feedback.unity3d.com/" target="_blank">フィードバック</a></li>
+        </ul>
+        <ul id="sn-company" style="display:none;">
+          <li class="sn-company-people jp"><a href="http://japan.unity3d.com/company/people">スタッフ</a></li>
+          <li class="sn-company-jobs jp"><a href="http://japan.unity3d.com/company/jobs/overview">採用情報</a></li>
+          <li class="sn-company-events jp"><a href="http://japan.unity3d.com/company/events">イベント</a></li>
+          <li class="sn-company-pr jp"><a href="http://japan.unity3d.com/company/public-relations">広報</a></li>
+          <li class="sn-company-union jp"><a href="http://japan.unity3d.com/company/union">Union</a></li>
+          <li class="sn-company-reseller jp"><a href="http://japan.unity3d.com/company/reseller">代理店</a></li>
+          <li class="sn-company-blog jp"><a href="http://japan.unity3d.com/blog">ブログ</a></li>
+          <li class="sn-company-access jp"><a href="http://japan.unity3d.com/company/access">アクセス</a></li>
+          <li class="sn-company-contact jp"><a href="http://japan.unity3d.com/company/contact">お問い合わせ</a></li>
+          <li class="sn-company-legal jp"><a href="http://japan.unity3d.com/company/legal">リーガル</a></li>
+        </ul>
+        <ul id="sn-unite" style="display:none;">
+          <li class="sn-unite-unite"><a href="http://japan.unity3d.com/unite/">Unite 2014</a></li>
+          <li class="sn-unite-archive"><a href="http://japan.unity3d.com/unite/archive">アーカイブ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="content-container" class="content-container">
+    <header class="mq-header clear">
+      <div class="mq-icon"><a href="http://japan.unity3d.com/developer/"></a></div>
+      <div class="mq-langbtn rel">
+        <div class="flag flag-jp"></div>
+        <div id="flag-list"></div>
+      </div>
+       <div class="mq-navbtn"><div class="icon-bar"></div><div class="icon-bar"></div><div class="icon-bar"></div></div>
+    </header>
+    <!-- InstanceBeginEditable name="main-content" -->
+      <div class="hero"><div class="sams"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/">Shooting Game</a></div></div>
+      <nav class="section-nav">
+        <div class="g12"><div class="wrap"><h2></h2>
+          <ul>
+            
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html">cp01</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/02.html">cp02</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/03.html">cp03</a></li>
+              
+              <li class="selected"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/04.html">cp04</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/05.html">cp05</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html">cp06</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/07.html">cp07</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/08.html">cp08</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/09.html">cp09</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/10.html">cp10</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/11.html">cp11</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/12.html">cp12</a></li>
+          <li class="top"></li></ul>
+        </div></div>
+      </nav>
+
+    <section id="content" class="content-wrapper gw clear 2d-shooting-game">
+
+
+      <!-- <nav class="quickjump shrink pos-fix" data-pos-fix-off-y="50">
+        <div class="header">
+          <h3>Quick jump:</h3>
+          <div class="clear"></div>
+        </div>
+        <ul class="simple">
+          <li><a href="#ss01">第 1 回　世界の「骨格」をつくろう</a></li>
+          <li><a href="#ss02">Unity を手に入れる</a></li>
+          <li><a href="#ss03">Unity の統合開発環境</a></li>
+          <li><a href="#ss04">必要なパーツを配置しよう</a></li>
+          <li><a href="#ss05">はじめてのスクリプト</a></li>
+          <li><a href="#ss06">まとめと次回のテーマ</a></li>
+          <li><a href="#ss07">プロジェクトファイルをダウンロード</a></li>
+        </ul>
+      </nav> -->
+
+<section class="content">
+
+       <article>
+        <div style="float:right"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game/game/04.html">日本語</a> | English</div>
+        <div class="clear"></div>
+      </article>
+
+
+    <h1><a id="h4"></a>Chapter 4. Let’s Build Some Enemies</h1>
+<p>So far we’ve made a player character, and it shoot, as well as move. Next up, we’ll make the enemies.</p>
+<p>This process is pretty similar to creating the player.</p>
+
+<h2><a id="h4-1"></a>4.1. Script Reuse</h2>
+<p>The script from the previous chapter has several parts that we can reuse for the enemy.</p>
+<p>Let’s take those common parts, and make them into a separate component.</p>
+
+<h3><a id="h4-1-1"></a>Create Spaceship.cs</h3>
+<p>Make a new <b>Spaceship.cs</b> script in the Scripts folder. The common functionality between both the player and the enemies will be stored in Spaceship.cs.</p>
+<div class="source-code">
+<p class="caption">Spaceship.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+
+</span><span class="com">///Require the Rigidbody2D component.</span><span class="pln">
+</span><span class="pun">[</span><span class="typ">RequireComponent</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="typ">Rigidbody2D</span><span class="pun">))]</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Spaceship</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Movement Speed</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> speed</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Bullet Firing Delay</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> shotDelay</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Bullet Prefab</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">GameObject</span><span class="pln"> bullet</span><span class="pun">;</span><span class="pln">
+
+
+        </span><span class="com">// Create a bullet</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Shot</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Transform</span><span class="pln"> origin</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="typ">Instantiate</span><span class="pln"> </span><span class="pun">(</span><span class="pln">bullet</span><span class="pun">,</span><span class="pln"> origin</span><span class="pun">.</span><span class="pln">position</span><span class="pun">,</span><span class="pln"> origin</span><span class="pun">.</span><span class="pln">rotation</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="com">// Move the ship</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Move</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Vector2</span><span class="pln"> direction</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                rigidbody2D</span><span class="pun">.</span><span class="pln">velocity </span><span class="pun">=</span><span class="pln"> direction </span><span class="pun">*</span><span class="pln"> speed</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<div class="column">
+
+<h3><a id="column-14"></a>RequireComponent</h3>
+<p>You can specify required components. The RequireComponent attribute, 
+when added, will prevent deletion of that component. For more details, 
+see <a href="http://docs.unity3d.com/Documentation/ScriptReference/RequireComponent.html" class="link">RequireComponent</a> in the documentation.</p>
+</div>
+<p>Next, we’ll make some corrections to <b>Player.cs</b> for parts that we made into common functionality.</p>
+<p>In the Start method, use GetComponent to find the Spaceship component.</p>
+<div class="source-code">
+<p class="caption">Player.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">using</span><span class="pln"> </span><span class="typ">System</span><span class="pun">.</span><span class="typ">Collections</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Player</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+
+        </span><span class="com">//Spaceship Component</span><span class="pln">
+        </span><span class="typ">Spaceship</span><span class="pln"> spaceship</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="typ">IEnumerator</span><span class="pln"> </span><span class="typ">Start</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Get the Spaceship component</span><span class="pln">
+                spaceship </span><span class="pun">=</span><span class="pln"> </span><span class="typ">GetComponent</span><span class="pun">&lt;</span><span class="typ">Spaceship</span><span class="pun">&gt;</span><span class="pln"> </span><span class="pun">();</span><span class="pln">
+
+                </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+                        </span><span class="com">// Make the bullet, using the player’s position/rotation</span><span class="pln">
+                        spaceship</span><span class="pun">.</span><span class="typ">Shot</span><span class="pln"> </span><span class="pun">(</span><span class="pln">transform</span><span class="pun">);</span><span class="pln">
+
+                        </span><span class="com">// Wait for shotDelay seconds.</span><span class="pln">
+                        </span><span class="kwd">yield</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">WaitForSeconds</span><span class="pln"> </span><span class="pun">(</span><span class="pln">spaceship</span><span class="pun">.</span><span class="pln">shotDelay</span><span class="pun">);</span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Update</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Right, Left</span><span class="pln">
+                </span><span class="kwd">float</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Input</span><span class="pun">.</span><span class="typ">GetAxisRaw</span><span class="pln"> </span><span class="pun">(</span><span class="str">"Horizontal"</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Up, Down</span><span class="pln">
+                </span><span class="kwd">float</span><span class="pln"> y </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Input</span><span class="pun">.</span><span class="typ">GetAxisRaw</span><span class="pln"> </span><span class="pun">(</span><span class="str">"Vertical"</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Get the facing direction</span><span class="pln">
+                </span><span class="typ">Vector2</span><span class="pln"> direction </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Vector2</span><span class="pln"> </span><span class="pun">(</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">).</span><span class="pln">normalized</span><span class="pun">;</span><span class="pln">
+
+                </span><span class="com">// Move</span><span class="pln">
+                spaceship</span><span class="pun">.</span><span class="typ">Move</span><span class="pln"> </span><span class="pun">(</span><span class="pln">direction</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<p>Attach Spaceship.cs to the Player game object, then return to the Inspector and set <b>Speed to 5</b>, <b>Shot Delay to 0.05</b>, and Bullet to the PlayerBullet Prefab.</p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/player_inspector.png" alt="Reconfiguring the Spaceship component.">
+<p class="caption">
+Figure 4.1: Reconfiguring the Spaceship component.
+</p>
+</div>
+<p>Play the game, and confirm that the movement is the same as in the previous chapter.</p>
+
+<h2><a id="h4-2"></a>4.2. Add The Enemies</h2>
+<p>Drag and drop the “Enemy” prefab that we made from the first chapter into the scene view.</p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/drag_enemy_prefab.png" alt="Dragging the Enemy prefab into the scene.">
+<p class="caption">
+Figure 4.2: Dragging the Enemy prefab into the scene.
+</p>
+</div>
+
+<h2><a id="h4-3"></a>4.3. Write An Enemy Script</h2>
+<p>First, attach Spaceship.cs to the Enemy game object.</p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/attach_spaceship_script.png" alt="Adding the Spaceship component to the Enemy.">
+<p class="caption">
+Figure 4.3: Adding the Spaceship component to the Enemy.
+</p>
+</div>
+
+<h3><a id="h4-3-1"></a>Enemy Movement</h3>
+<p>Make a new <b>Enemy.cs</b> in the Scripts folder.</p>
+<p>First, we’ll make it so that the enemy moves downward.</p>
+<div class="source-code">
+<p class="caption">Enemy.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">using</span><span class="pln"> </span><span class="typ">System</span><span class="pun">.</span><span class="typ">Collections</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Enemy</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Spaceship Component</span><span class="pln">
+        </span><span class="typ">Spaceship</span><span class="pln"> spaceship</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Start</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+
+                </span><span class="com">// Get the Spaceship component</span><span class="pln">
+                spaceship </span><span class="pun">=</span><span class="pln"> </span><span class="typ">GetComponent</span><span class="pun">&lt;</span><span class="typ">Spaceship</span><span class="pun">&gt;</span><span class="pln"> </span><span class="pun">();</span><span class="pln">
+
+                </span><span class="com">// Move in the negative direction of the local Y-axis</span><span class="pln">
+                spaceship</span><span class="pun">.</span><span class="typ">Move</span><span class="pln"> </span><span class="pun">(</span><span class="pln">transform</span><span class="pun">.</span><span class="pln">up </span><span class="pun">*</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<div class="column">
+
+<h3><a id="column-15"></a>transform.up</h3>
+<p>For now, we’re using the local coordinate system for the direction of the enemy’s movement.</p>
+<p>It’s possible to calculate this from the world coordinates, but for now we can easily access it using <b>transform.up</b>.</p>
+<p></p><div style="display:flex"><p></p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/vector3.png" alt="" width="90%">
+</div>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/transform.png" alt="" width="90%">
+</div>
+<p></p></div><p></p>
+<p>For more details, see <a href="http://docs.unity3d.com/Documentation/ScriptReference/Transform.html" class="link">Transform</a> in the documentation.</p>
+</div>
+<p>Add the Enemy component to the Enemy game object, and set the Spaceship’s <b>Speed to 0.5</b>.</p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/enemy_spacehip_spped.png" alt="Configuring the enemy’s Spaceship and Enemy components.">
+<p class="caption">
+Figure 4.4: Configuring the enemy’s Spaceship and Enemy components.
+</p>
+</div>
+<p>Play the game. Did the enemy move down the screen?</p>
+
+<h3><a id="h4-3-2"></a>Making the Bullets</h3>
+<p>Drag and drop the <tt class="inline-code">Bullet_1</tt> sprite into the scene view to make the enemy’s bullets.</p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/drag_enemy_bullet.png" alt="Dragging and dropping the Bullet_1 sprite">
+<p class="caption">
+Figure 4.5: Dragging and dropping the Bullet_1 sprite
+</p>
+</div>
+<p>Set the name to <b>EnemyBullet</b>.</p>
+<p>Let's also attach a <b>Rigidbody2D</b> and <b>Bullet.cs</b> to it.</p>
+<p>Set the Bullet’s <b>Speed to 2</b>, and the Rigidbody2D’s <b>Gravity Scale to 0</b>.</p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/enemy_bulet_param.png" alt="Configuring the enemy bullet game object.">
+<p class="caption">
+Figure 4.6: Configuring the enemy bullet game object.
+</p>
+</div>
+<p>Finally, save it as a prefab, and in the Enemy’s Spaceship component, set the Bullet property to be this <b>new EnemyBulelt</b> prefab.</p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/enemy_bullet_prefab.png" alt="The state of the Enemy game object so far.">
+<p class="caption">
+Figure 4.7: The state of the Enemy game object so far.
+</p>
+</div>
+
+<h3><a id="h4-3-3"></a>Firing Bullets</h3>
+<p>The implementation of bullet firing is a little different compared to the player.</p>
+<p>We’re going to make it so that the enemy can fire multiple bullets from different locations and angles.</p>
+
+<h4><a id="h4-3-3-1"></a>Making ShotPosition</h4>
+<p>Make an empty GameObject and set it to be the child of the enemy. Make a total of three of these.</p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/shotpositions.png" alt="Three ShotPosition game objects at the same position.">
+<p class="caption">
+Figure 4.8: Three ShotPosition game objects at the same position.
+</p>
+</div>
+<p>We want to fire at 20º intervals, but consider the current firing 
+position. As it is, the bullets will fire in the upward direction.</p>
+<p>By setting the Z rotation to 180º they will fire downward, and then we can use 20º offsets from there.</p>
+<div class="table">
+<p class="caption">Table 4.1: Changing the Rotation of the Transform.</p>
+<table>
+<tbody><tr><th>Game Object Name</th><th>X</th><th>Y</th><th>Z</th></tr>
+<tr><td>ShotPosition（Number 1）</td><td>0</td><td>0</td><td>160</td></tr>
+<tr><td>ShotPosition（Number 2）</td><td>0</td><td>0</td><td>180</td></tr>
+<tr><td>ShotPosition（Number 3）</td><td>0</td><td>0</td><td>200</td></tr>
+</tbody></table>
+</div>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/shot_positions.png" alt="Bullets will fire from each ShotPosition’s facing angle.">
+<p class="caption">
+Figure 4.9: Bullets will fire from each ShotPosition’s facing angle.
+</p>
+</div>
+<p>With that, we’ve set up the number, position and angle of bullets that will appear when the enemy fires.</p>
+
+<h4><a id="h4-3-3-2"></a>Firing Bullets From ShotPosition</h4>
+<p>Let's add the ShotPositions we made earlier to the script side of 
+things. Change the Start method to a coroutine, and fire bullets in a 
+while loop, like the Player script.</p>
+<div class="source-code">
+<p class="caption">Enemy.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">using</span><span class="pln"> </span><span class="typ">System</span><span class="pun">.</span><span class="typ">Collections</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Enemy</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Spaceship Component</span><span class="pln">
+        </span><span class="typ">Spaceship</span><span class="pln"> spaceship</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="typ">IEnumerator</span><span class="pln"> </span><span class="typ">Start</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Get the Spaceship component</span><span class="pln">
+                spaceship </span><span class="pun">=</span><span class="pln"> </span><span class="typ">GetComponent</span><span class="pun">&lt;</span><span class="typ">Spaceship</span><span class="pun">&gt;</span><span class="pln"> </span><span class="pun">();</span><span class="pln">
+
+                </span><span class="com">// Move in the negative direction of the local Y-axis</span><span class="pln">
+                spaceship</span><span class="pun">.</span><span class="typ">Move</span><span class="pln"> </span><span class="pun">(</span><span class="pln">transform</span><span class="pun">.</span><span class="pln">up </span><span class="pun">*</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+                        </span><span class="com">// Get all the child elements</span><span class="pln">
+                        </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> transform</span><span class="pun">.</span><span class="pln">childCount</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+                                </span><span class="typ">Transform</span><span class="pln"> shotPosition </span><span class="pun">=</span><span class="pln"> transform</span><span class="pun">.</span><span class="typ">GetChild</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);</span><span class="pln">
+
+                                </span><span class="com">// Make the bullet, using the player’s position/rotation</span><span class="pln">
+                                spaceship</span><span class="pun">.</span><span class="typ">Shot</span><span class="pln"> </span><span class="pun">(</span><span class="pln">shotPosition</span><span class="pun">);</span><span class="pln">
+                        </span><span class="pun">}</span><span class="pln">
+
+                        </span><span class="com">// Wait for shotDelay seconds.</span><span class="pln">
+                        </span><span class="kwd">yield</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">WaitForSeconds</span><span class="pln"> </span><span class="pun">(</span><span class="pln">spaceship</span><span class="pun">.</span><span class="pln">shotDelay</span><span class="pun">);</span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<p>Set the Enemy’s <b>Shot Delay to 0.3</b>.</p>
+<p>Okay, let’s start up the game and see what happens!</p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/shoot_enemy.png" alt="Firing three bullets">
+<p class="caption">
+Figure 4.10: Firing three bullets
+</p>
+</div>
+
+<h3><a id="h4-3-4"></a>Making an Enemy That Doesn’t Fire Bullets</h3>
+<p>It's fine if all the enemies shoot bullets, but let’s make one that doesn’t shoot anything.</p>
+
+<h4><a id="h4-3-4-1"></a>Add these changes to Spaceship.cs</h4>
+<p>Add a bool variable named <tt class="inline-code">canShot</tt> to control whether the enemy can shoot.</p>
+<div class="source-code">
+<p class="caption">Spaceship.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+
+</span><span class="pun">[</span><span class="typ">RequireComponent</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="typ">Rigidbody2D</span><span class="pun">))]</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Spaceship</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Movement Speed</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> speed</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Bullet Firing Delay</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> shotDelay</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Bullet Prefab</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">GameObject</span><span class="pln"> bullet</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Whether the enemy can shoot</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">bool</span><span class="pln"> canShot</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Making bullets</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Shot</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Transform</span><span class="pln"> origin</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="typ">Instantiate</span><span class="pln"> </span><span class="pun">(</span><span class="pln">bullet</span><span class="pun">,</span><span class="pln"> origin</span><span class="pun">.</span><span class="pln">position</span><span class="pun">,</span><span class="pln"> origin</span><span class="pun">.</span><span class="pln">rotation</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="com">// Ship Movement</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Move</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Vector2</span><span class="pln"> direction</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                rigidbody2D</span><span class="pun">.</span><span class="pln">velocity </span><span class="pun">=</span><span class="pln"> direction </span><span class="pun">*</span><span class="pln"> speed</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+
+<h4><a id="h4-3-4-2"></a>Fixing up Enemy.cs</h4>
+<p>We're firing bullets using a coroutine in the Start method. If we 
+don’t need to shoot bullets, we can use “yield break;” to end the 
+coroutine.</p>
+<div class="source-code">
+<p class="caption">Enemy.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">using</span><span class="pln"> </span><span class="typ">System</span><span class="pun">.</span><span class="typ">Collections</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Enemy</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Spaceship Component</span><span class="pln">
+        </span><span class="typ">Spaceship</span><span class="pln"> spaceship</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="typ">IEnumerator</span><span class="pln"> </span><span class="typ">Start</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Get the Spaceship component</span><span class="pln">
+                spaceship </span><span class="pun">=</span><span class="pln"> </span><span class="typ">GetComponent</span><span class="pun">&lt;</span><span class="typ">Spaceship</span><span class="pun">&gt;</span><span class="pln"> </span><span class="pun">();</span><span class="pln">
+
+                </span><span class="com">// Move in the negative direction of the local Y-axis</span><span class="pln">
+                spaceship</span><span class="pun">.</span><span class="typ">Move</span><span class="pln"> </span><span class="pun">(</span><span class="pln">transform</span><span class="pun">.</span><span class="pln">up </span><span class="pun">*</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// If canShot is false, end the coroutine here.</span><span class="pln">
+                </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">spaceship</span><span class="pun">.</span><span class="pln">canShot </span><span class="pun">==</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                        </span><span class="kwd">yield</span><span class="pln"> </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+
+                </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+                        </span><span class="com">// Get all the child elements</span><span class="pln">
+                        </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> transform</span><span class="pun">.</span><span class="pln">childCount</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+                                </span><span class="typ">Transform</span><span class="pln"> shotPosition </span><span class="pun">=</span><span class="pln"> transform</span><span class="pun">.</span><span class="typ">GetChild</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);</span><span class="pln">
+
+                                </span><span class="com">// Make the bullet, using the player’s position/rotation</span><span class="pln">
+                                spaceship</span><span class="pun">.</span><span class="typ">Shot</span><span class="pln"> </span><span class="pun">(</span><span class="pln">shotPosition</span><span class="pun">);</span><span class="pln">
+                        </span><span class="pun">}</span><span class="pln">
+
+                        </span><span class="com">// Wait for shotDelay seconds.</span><span class="pln">
+                        </span><span class="kwd">yield</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">WaitForSeconds</span><span class="pln"> </span><span class="pun">(</span><span class="pln">spaceship</span><span class="pun">.</span><span class="pln">shotDelay</span><span class="pun">);</span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<p>When true in the script, or checked in the inspector, the enemy will fire bullets.</p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/can_shot_inspector.png" alt="The new canShot variable.">
+<p class="caption">
+Figure 4.11: The new canShot variable.
+</p>
+</div>
+<p>Now we can make an enemy that doesn’t shoot anything!</p>
+<div class="image">
+<img src="Let%E2%80%99s%20Build%20Some%20Enemies-Dateien/cant_shot.png" alt="Both kinds of enemies, firing and not firing">
+<p class="caption">
+Figure 4.12: Both kinds of enemies, firing and not firing
+</p>
+</div>
+<p>Lastly, be sure to save and update your scene and prefabs!</p>
+
+
+    
+      <h3>End of Chapter 04</h3>
+      <p>That’s all for this section. If you had problems, you can 
+download the example project up to this point, and start fresh on the 
+next chapter.</p>
+      <p></p><section class="ss12" id="ss12"><a class="blue-btn" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/project/04_ShootingGame.zip">Download This Chapter’s Project File</a></section><p></p>
+    
+
+</section>
+<!-- ページング -->
+<nav class="paging with-top">
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <a class="prev" rel="prev" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/03.html">Chapter 03</a>
+  <a class="next" rel="next" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/05.html">Chapter 05</a>
+  
+</nav>
+Page last updated: 2014-04-25
+  
+</section>
+
+    <script type="text/javascript">
+      renderMenu('developer/document');
+      hljs.initHighlightingOnLoad();
+    </script>
+
+<!-- InstanceEndEditable --><!-- #BeginLibraryItem "/Library/footer-hd.lbi" --> <footer>
+    <div class="footer-wrapper clear">
+      <div class="left">
+        <div class="copy">Copyright ©2015 Unity Technologies Japan G.K. All Rights Reserved</div>
+        <ul>
+          <li><a href="http://japan.unity3d.com/blog/">Blog</a></li>
+          <li><a href="http://japan.unity3d.com/company/contact/">Contact</a></li>
+          <li><a href="http://japan.unity3d.com/company/legal">Legal</a></li>
+          <li><a href="http://japan.unity3d.com/company/legal/privacy-policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="social">
+        <a href="http://www.facebook.com/unity3d" class="icon facebook" target="_blank">Facebook</a>
+        <a href="http://www.twitter.com/unity_japan" class="icon twitter" target="_blank">Twitter</a>
+        <a href="https://plus.google.com/u/0/104568650392955941577/" class="icon googleplus" target="_blank">Google+</a>
+      </div>
+    </div>
+  </footer><!-- #EndLibraryItem --></section>
+  <input id="language" value="jp" type="hidden">
+</div>
+<div style="display: none;" class="overlay"></div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2854981-1']);
+  _gaq.push(['_setDomainName', 'unity3d.com']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['b._setAccount', 'UA-32967615-2']);
+  _gaq.push(['b._trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+</body></html>

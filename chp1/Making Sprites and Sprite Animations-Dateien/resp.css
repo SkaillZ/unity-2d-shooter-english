@@ -1,0 +1,590 @@
+/* ====================================================
+ * Company: Unity Technologies
+ * Author:  Rickard Andersson, rickard@unity3d.com
+ * Content: Media Queries
+======================================================= */
+
+@media only screen and (min-width: 768px){
+
+div.hero { height: 192px; }
+
+.unity div.background { height: 400px; background: url(images/elements/backgrounds/overview.jpg) 50% 0 no-repeat;}
+.unity div.hero { height: 262px; }
+.unity-quality div.background { height: 400px; background: url(images/elements/backgrounds/sunshafts.jpg) 50% 0 no-repeat;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.unity-quality div.hero { height: 262px; }
+.unity-quality-lighting div.hero, .unity-quality-rendering div.hero, .unity-quality-terrains div.hero, .unity-quality-specialeffects div.hero, .unity-quality-audio div.hero, .unity-quality-materials div.hero, .unity-quality-ai div.hero, .unity-quality-physics div.hero { height: 162px; }
+.unity-quality-specialeffects div.background { height: 330px; background: url(images/elements/backgrounds/special-effects.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-audio div.background { height: 330px; background: url(images/elements/backgrounds/fract.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-materials div.background { height: 330px; background: url(images/elements/backgrounds/materials.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-ai div.background { height: 330px; background: url(images/elements/backgrounds/cubemen.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-physics div.background { height: 330px; background: url(images/elements/backgrounds/csr-racing.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-lighting div.background { height: 330px; background: url(images/elements/backgrounds/lighting.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-rendering div.background { height: 330px; background: url(images/elements/backgrounds/butterfly-sf-hill.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-terrains div.background { height: 330px; background: url(images/elements/backgrounds/terrain.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow div.background { height: 450px; background: #191919 url(images/elements/backgrounds/workflow.jpg) 50% 0 no-repeat;}
+.unity-workflow div.hero { height: 430px; }
+.unity-workflow-integrated-editor div.hero, .unity-workflow-asset-workflow div.hero, .unity-workflow-scene-building div.hero, .unity-workflow-rapid-iteration div.hero, .unity-workflow-programming div.hero, .unity-workflow-integrated-editor div.hero, .unity-workflow-networking div.hero  { height: 162px; }
+.unity-workflow-integrated-editor div.background { height: 330px; background: url(images/elements/backgrounds/integrated-editor.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow-asset-workflow div.background { height: 330px; background: url(images/elements/backgrounds/escape-plan.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow-scene-building div.background { height: 330px; background: url(images/elements/backgrounds/endless-space.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow-rapid-iteration div.background { height: 330px; background: url(images/elements/backgrounds/oliver-spike.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow-programming div.background { height: 330px; background: url(images/elements/backgrounds/splice.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow-networking div.background { height: 330px; background: url(images/elements/backgrounds/guns-of-icarus.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-mecanim div.background { height: 360px; background: url(images/elements/backgrounds/mecanim.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-mecanim div.hero { height: 222px; }
+.unity-performance div.background { height: 360px; background: #f0f0f0 url(images/elements/backgrounds/shadowgun.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-performance div.hero { height: 222px; }
+.unity-multiplatform div.background { height: 360px; background: url(images/elements/backgrounds/.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-multiplatform-mobile div.background { height: 360px; background: url(images/elements/backgrounds/bad-piggies.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-multiplatform-desktop div.background { height: 360px; background: url(images/elements/backgrounds/pid.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-multiplatform-web div.background { height: 360px; background: url(images/elements/backgrounds/robot-rising.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-multiplatform-consoles div.background { height: 360px; background: url(images/elements/backgrounds/rochard-gameplay.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-collaboration div.background { height: 280px; background: url(images/elements/backgrounds/collaboration.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-collaboration div.hero { height: 142px; }
+.unity-download-thanks div.background { height: 330px; background: url(images/elements/backgrounds/thankyou.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-download-thanks div.hero { height: 192px; }
+.unity-whatsnew-latest div.background { height: 400px; background: url(images/elements/backgrounds/medieval-village.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-whatsnew-latest div.hero { height: 232px; }
+
+.gallery div.background, .gallery-madewith-profiles div.background, .gallery-demos-projects div.background { height: 330px; }
+.gallery-madewith-profiles div.hero, .gallery-demos-projects div.hero { height: 162px; }
+.gallery-madewith-profiles div.background div.b, .gallery-demos-projects div.background div.b { background-repeat: no-repeat; -webkit-background-size: auto; -moz-background-size: auto; -o-background-size: auto; background-size: auto; }
+.gallery-madewith-list div.background { height: 360px; }
+
+.assetstore div.background, .assetstore-onlineservices div.background, .assetstore-submit div.background { height: 235px; background: url(images/elements/backgrounds/assetstore.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.assetstore div.hero, .assetstore-onlineservices div.hero, .assetstore-submit div.hero { height: 97px; }
+
+.company div.hero, .company-people div.hero { height: 0; }
+.company-pr-fastfacts div.background { height: 300px; background: url(images/elements/backgrounds/clouds.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.company-pr-fastfacts div.hero { height: 132px; }
+.company-reseller div.background { height: 330px; background: #222 url(images/elements/backgrounds/worldmap-dark.jpg) 50% 0 no-repeat; }
+.company-reseller div.hero { height: 162px; }
+.company-union div.background { height: 410px; background: url(images/elements/backgrounds/hexagon-bg.png) 50% 0 repeat-y; }
+.company-union div.hero { height: 242px; }
+.company-jobs div.background { height: 360px; background: url(images/elements/backgrounds/developers.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.company-jobs div.hero { height: 222px; }
+.company-events-gdc13 div.background { height: 330px; background: url(images/elements/backgrounds/gdc13-d.png) 50% 0 no-repeat; }
+.company-events-gdc13 div.hero { height: 162px; }
+
+.creategames div.background { height: 360px; }
+.creategames div.hero { height: 248px; }
+.whypro div.background { height: 360px; }
+.whypro div.hero { height: 248px; }
+
+.sim div.hero { height: 188px; }
+.sim div.background { height: 330px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+.gambling div.hero { height: 268px; }
+.gambling div.background { height: 380px; background: #fff url(images/elements/backgrounds/dices.jpg) 50% 0 no-repeat; }
+
+.contest-flash div.background { height: 360px; background: url(images/elements/backgrounds/taildrift.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.contest-flash div.hero { height: 248px; }
+.error div.background { height: 93px; background: #ffffff; }
+
+.unite-unite div.background { height: 330px; background: url(images/elements/backgrounds/unite/2013/unite2013.png) 50% 0 no-repeat; }
+.unite-unite div.hero { height: 192px; }
+.unite13-vancouver div.background { height: 410px; background: url(images/elements/backgrounds/unite/2013/vancouver-2.png) 50% 0 no-repeat; }
+.unite13-vancouver div.hero { height: 242px; }
+.unite13-nordic div.background { height: 380px; background: url(images/elements/backgrounds/unite/2013/nordic.jpg) 50% 50px no-repeat; }
+.unite13-nordic div.hero { height: 232px; }
+.unite13-china div.background { height: 380px; background: url(images/elements/backgrounds/unite/2013/china-new.jpg) 50% 50px no-repeat; }
+.unite13-china div.hero { height: 242px; }
+
+img.jumping-man { width: 300px; position: absolute; top: -28px; right: 40px; }
+
+}
+
+/**************************************************
+  #### Portrait tablet to landscape and desktop
+**************************************************/
+@media only screen and (min-width: 767px) and (max-width: 979px){
+
+.gw{width:720px;font: 14px/18px Helvetica, Arial, sans-serif;}
+.g1{width:40px}.g2{width:100px}.g3{width:160px}.g4{width:220px}.g5{width:280px}.g6{width:340px}.g7{width:400px}.g8{width:460px}.g9{width:520px}.g10{width:580px}.g11{width:640px}.g12{width:700px}
+.g1b,.g2b,.g3b,.g4b,.g5b,.g6b,.g7b,.g8b,.g9b,.g10b,.g11b,.g12b{padding:15px;}
+.g1b{width:10px}.g2b{width:70px}.g3b{width:130px}.g4b{width:190px}.g5b{width:250px}.g6b{width:310px}.g7b{width:370px}.g8b{width:430px}.g9b{width:490px}.g10b{width:550px}.g11b{width:610px}.g12b{width:670px}
+.g1n{width:60px}.g2n{width:120px}.g3n{width:180px}.g4n{width:240px}.g5n{width:300px}.g6n{width:360px}.g7n{width:420px}.g8n{width:480px}.g9n{width:540px}.g10n{width:600px}.g11n{width:680px}.g12n{width:720px}
+
+div.tabs ul li { font-size: 0.85em; }
+.ts1 {font-size:0.85em !important;}
+header.master-header {max-width: 740px;} header.master-header div.header-wrapper, footer div.footer-wrapper {width: 700px;}
+div.section-header, nav.section-nav h2 {display: none;} nav.section-nav ul li a {padding: 0 14px;}
+nav.top-nav ul li a { padding: 0 15px; }
+nav.top-nav ul li.tn-download { float: left; }
+nav.sub-nav ul { padding: 0 0 2px 84px; }
+div.hero { max-width: 720px; }
+div.sidebar div.g4 { width: 200px; padding: 0 0 0 20px; } div.sidebar div.g3 { width: 150px; } div.bottombar div.ruler-c { width: 720px; left: 0; }
+div.bottombar div.g4 { width: 200px; padding: 0 10px; }
+div.select-box div.label { width: 200px; } div.select-box ul.options { width: 215px; } div.select-box ul li { font-size: 0.85em; }
+iframe.video-iframe { width: 700px; height: 394px; }
+.webplayer div#windows { background-position: right 0 !important; -webkit-background-size: 84px 71px !important; -moz-background-size: 84px 71px !important; -o-background-size: 84px 71px !important; background-size: 84px 71px !important; }
+.webplayer div#osx { background-position: right 0 !important; -webkit-background-size: 78px 72px !important; -moz-background-size: 84px 71px !important; -o-background-size: 84px 71px !important; background-size: 84px 71px !important; }
+.sim .hero .g7 { width: 700px !important; } .sim div.hero { height: 172px; }  .sim .hero .banner { top: 140px !important; }
+.sim div.background { height: 284px !important; }
+.contest-flash div.flash-player, .contest-flash #unityPlayer { height: 378px !important; } .contest-flash div.flash-player embed, .contest-flash div.flash-player object { width: 700px !important; }.contest-flash div#grandprice h1 { padding: 180px 0 0 0 !important;}
+.doc { font-size: 1.1em; } .doc table { width: 460px; }
+.company-pr-fastfacts div.graph { width: 440px !important; } .company-pr-fastfacts div#webplayer-graph, .company-pr-fastfacts div#editor-graph { width: 440px !important; }
+.company-pr-press div.date, .company-pr-press div.title { font-size: 0.85em !important; } .company-pr-press div.title { width: 380px !important; }
+.company-reseller div.hero h1 { font-size: 2.0em !important; }
+.gallery-madewith-profiles .profile-icon { width: 60px; } .gallery-madewith-profiles .profile-header { width: 360px; }
+.gallery-demos-projects .asset-icon { width: 60px; } .gallery-demos-projects .asset-header { width: 360px; }
+.gallery-demos-projects .asset { height: 250px; }
+.assetstore div.background, .assetstore-onlineservices div.background, .assetstore-submit div.background { background: url(images/elements/backgrounds/assetstore.jpg) 37% 0 no-repeat; }
+.bottombar div.ruler-r, .bottombar div.ruler-l { display: none; }
+.home div.news div.news-item div.text, .home div.news div.post div.text { width: 254px !important; }
+.home div.newsletter input.email { width: 218px !important; } .home div.newsletter input.blue-btn { padding: 0 10px; } .home div.newsletter #agreeLabel { width: 289px; }
+.home .more a, .home .more a span { width: 76px !important; } .home .more a span.webplayer { background-position: 27px -359px !important; } .home .more a span.video { background-position: -55px -360px !important; } .home .more a span.blog { background-position: -137px -359px !important; } .home .more a span.jobs { background-position: -215px -360px !important; }
+div.promo div.hover { top: 81px; /*height: 150px;*/ } div.promo a:hover div.hover { top: 35px; }
+.company-union div.twitter-header { width: 200px !important; } .company-union div.twitter-header h3 { font-size: 1em; }
+.unite-archive div.text { font-size: 0.85em !important; }
+.unity-multiplatform .section-nav .selected { display: none !important; } .unity-multiplatform div.hero div.slider-captions div.caption p { width: 300px !important; }
+
+.company-events div.hero { height: 160px; }
+img.jumping-man { width: 250px; position: absolute; top: -12px; right: 20px; }
+
+}
+
+/**************************************************
+  #### Mobile Landscape to Tablet Portrait
+**************************************************/
+@media only screen and (min-width: 480px) and (max-width: 766px) {
+
+.gw{width:440px;font: 14px/18px Helvetica, Arial, sans-serif;}
+.g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9,.g10,.g11,.g12, header.master-header div.header-wrapper, nav.section-nav, footer div.footer-wrapper {width: 420px;}
+.g1b,.g2b,.g3b,.g4b,.g5b,.g6b,.g7b,.g8b,.g9b,.g10b,.g11b,.g12b{width:400px;padding:10px;}
+.g1n,.g2n,.g3n,.g4n,.g5n,.g6n,.g7n,.g8n,.g9n,.g10n,.g11n,.g12n, div.section-header {width: 440px;}
+.g2-img { width: 85px; } .g3-img { width: 200px; } .col5 { width: 200px; }
+div#master-wrapper, header.master-header {max-width: 460px;}nav.section-nav h2 {display: none;}nav.section-nav ul li a {padding: 0 10px;}
+div.hero { max-width: 440px; font: 14px/18px Helvetica, Arial, sans-serif; }
+div.sidebar { width: 440px; } div.sidebar div.g4 { width: 420px; padding: 0; }div.sidebar div.g3 { width: 420px; padding: 0; }
+div.bottombar div.g4 { width: 420px; padding: 0; } div.bottombar div.g4 .icon { width: 50%; } div.bottombar:before, div.bottombar:after { display: none; } div.bottombar a.blue-btn { margin: 0 0 20px 0; } div.bottombar div.ruler-c { width: 380px; }
+div.select-box div.label { width: 385px; margin: 0 0 10px 0; } div.select-box ul.options { width: 400px; } div.select-box ul li { font-size: 0.85em; }
+iframe.video-iframe { width: 420px; height: 237px; }
+.unite-archive .video { width: 300px; margin: 10px auto 20px auto; float: none; display: block; }
+.sim div.hero { height: 148px; } .sim div.hero h1 { font-size: 1.8em; padding: 10px 0 0 0; }  .sim .hero .banner { display: none !important; } .sim div.background { height: 234px !important; }
+.contest-flash div.flash-player, .contest-flash #unityPlayer { height: 227px !important; } .contest-flash div.flash-player embed, .contest-flash div.flash-player object { width: 420px !important; }.contest-flash div#grandprice h1 { padding: 130px 0 0 0 !important;}
+.doc { font-size: 1.1em; } .doc table { width: 420px; }
+.company-pr-fastfacts div.graph { width: 400px !important; } .company-pr-fastfacts div#webplayer-graph, .company-pr-fastfacts div#editor-graph { width: 400px !important; }
+.company-pr-press div.tabs { padding: 5px 0 0 0; } .company-pr-press div.date, .company-pr-press div.title { font-size: 0.85em !important; } .company-pr-press div.title { width: 420px !important; }
+.company-union .game { width: 300px; margin: 10px auto 10px auto; float: none; display: block; }
+.gallery-madewith-list .game { width: 300px; margin: 10px auto 20px auto; float: none; display: block; }
+.gallery-madewith-trailers .video, .gallery-demos-videos .video { width: 200px; height: 151px; } .gallery-madewith-trailers #video-list .clear, .gallery-demos-videos #video-list .clear { display: none; }
+.gallery-madewith-profiles #profiles .g4 { width: 200px; height: 180px; }
+.gallery-madewith-profiles .profile-icon { width: 60px; } .gallery-madewith-profiles .profile-header { width: 340px; }
+.gallery-demos-livedemos #unityPlayer { height: 194px; } .gallery-demos-livedemos .demoitem { width: 200px; } .gallery-demos-livedemos #demo-info img { display: none !important; }
+.gallery-demos-projects .asset-icon { width: 60px; } .gallery-demos-projects .asset-header { width: 340px; }
+.unity-whatsnew .banner { display: none; }
+.unity-multiplatform div.platform-icon { margin: 9px !important; }
+.unity-workflow div.background { height: 260px !important;} .unity-workflow div.hero { height: 190px; }
+.assetstore-onlineservices .g4, .assetstore-onlineservices .g8 { width: 300px; margin: 10px auto 10px auto; float: none; display: block; }
+div.promo { width: 200px; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+div.promo a { color: #444 !important; text-decoration: none; }
+div.promo img { -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3); -moz-box-shadow: 0 0 10px rgba(0,0,0,0.3); box-shadow: 0 0 10px rgba(0,0,0,0.3); }
+div.promo div.hover { width: 100%; padding: 8px 0 0 0; background: none; position: static; }
+div.promo h3, div.promo p { color: #444 !important; padding: 0; font-size: 1em; font-weight: bold !important; }
+div.promo p { font-size: 0.85em; font-weight: normal !important; }
+div.promo h3:before, div.promo h3:after { display: none; }
+
+.company-events div.hero { height: 100px; margin-top: 10px; }
+.g12b .g7 { width: 380px; }
+}
+
+/**************************************************
+  #### Landscape phones and down
+**************************************************/
+@media only screen and (max-width: 479px) {
+
+.gw {width:320px;font: 14px/18px Helvetica, Arial, sans-serif;}
+.g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9,.g10,.g11,.g12, header.master-header div.header-wrapper, nav.section-nav, footer div.footer-wrapper {width: 300px;}
+.g1b,.g2b,.g3b,.g4b,.g5b,.g6b,.g7b,.g8b,.g9b,.g10b,.g11b,.g12b{width:280px;padding:10px;}
+.g2-img { width: 86px; } 
+div#master-wrapper, header.master-header, div.section-header {max-width: 320px;}
+.g1n,.g2n,.g3n,.g4n,.g5n,.g6n,.g7n,.g8n,.g9n,.g10n,.g11n,.g12n {width: 320px;}
+nav.section-nav h2 {display: none;}nav.section-nav ul li a {padding: 0 10px;}
+div.hero { max-width: 320px; font: 14px/18px Helvetica, Arial, sans-serif; }
+div.sidebar { width: 320px; } div.sidebar div.g4 { width: 300px; padding: 0; } div.sidebar div.g3 { width: 300px; padding: 0; }
+div.bottombar div.g4 { width: 300px; padding: 0; } div.bottombar:before, div.bottombar:after { display: none; } div.bottombar a.blue-btn { margin: 0 0 20px 0; } div.bottombar div.ruler-c { width: 260px; }
+div.select-box div.label { width: 265px; margin: 0 0 10px 0; } div.select-box ul.options { width: 280px; } div.select-box ul li { font-size: 0.85em; }
+iframe.video-iframe { width: 300px; height: 169px; }
+.sim div.hero { height: 218px; } .sim div.hero h1 { padding: 10px 0 0 0; } .sim .hero .banner { display: none !important; }.sim div.background { height: 304px !important; }
+.contest-flash div.flash-player, .contest-flash #unityPlayer { height: 162px !important; } .contest-flash div.flash-player embed, .contest-flash div.flash-player object { width: 300px !important; }.contest-flash div#grandprice h1 { padding: 70px 0 0 0 !important;}
+.unity-license div.tabs { width: 280px; padding: 10px 0 0 0; } .unity-license div.tabs li a { width: 49px; text-align: center; }
+.doc { font-size: 1.1em; } .doc table { width: 300px !important; }
+.company-pr-fastfacts div.graph { width: 280px !important; } .company-pr-fastfacts div#webplayer-graph, .company-pr-fastfacts div#editor-graph { width: 280px !important; }
+.company-pr-press div.tabs { padding: 5px 0 0 0; } .company-pr-press div.date, .company-pr-press div.title { font-size: 0.85em !important; } .company-pr-press div.title { width: 300px !important; }
+.gallery-madewith-profiles .profile-icon { display: none; }
+.gallery-demos-livedemos #unityPlayer { height: 139px; } .gallery-demos-livedemos .demoitem { width: 140px; } .gallery-demos-livedemos #demo-info img { display: none !important; }
+.gallery-demos-projects .asset-icon { width: 40px; margin-right: 0; } .gallery-demos-projects .asset-header { width: 250px; }
+.unity-whatsnew .banner { display: none; }
+.unity-multiplatform div.platform-icon { margin: 5px !important; }
+.unity-mecanim .runner { display: none; }
+.company-union div.hero img { margin-top: 30px; }
+div.promo { width: 220px; float: none; display: block; margin: 10px auto; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+div.promo a { color: #444 !important; text-decoration: none; }
+div.promo img { margin: 0 auto; -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3); -moz-box-shadow: 0 0 10px rgba(0,0,0,0.3); box-shadow: 0 0 10px rgba(0,0,0,0.3); }
+div.promo div.hover { padding: 8px 0 0 0; background: none; position: static; }
+div.promo h3, div.promo p { color: #444 !important; padding: 0; font-size: 1em; font-weight: bold !important; }
+div.promo p { font-size: 0.85em; font-weight: normal !important; }
+div.promo h3:before, div.promo h3:after { display: none; }
+div.prev { left: 10px; } div.next { right: 10px; }
+.company-events div.hero { height: 75px; margin-top: 10px; }
+.g12b .g7 { width: 270px; }
+}
+
+/**************************************************
+  #### Common styles for res 320-766
+**************************************************/
+@media only screen and (min-width: 150px) and (max-width: 766px) {
+
+div.lang { display: none; }
+.ts1 { font-size:0.85em !important; }
+div.tabs ul li { font-size: 0.85em; }
+.blue-btn, .gray-btn { padding: 0 15px; }
+.bigbtn { font-size: 1em; }
+
+img.jumping-man { display: none; }
+
+/****************************************
+  ==== MASTER LAYOUT
+****************************************/
+
+section.content-container {
+  min-width: 320px; max-width: 766px; width: 100%; position: absolute; top: 0; left: 0; z-index: 400;
+}
+section.content-wrapper {
+  padding: 10px 0 50px 0;
+}
+header.mq-header {
+  width: 100%; height: 50px; display: block; position: relative; z-index: 9999; border-bottom: #379fc9 2px solid; background: rgba(84,84,84,0.9); background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU0NTQ1NCIgc3RvcC1vcGFjaXR5PSIwLjkiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjkyOTI5IiBzdG9wLW9wYWNpdHk9IjAuOSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGYwZjBmIiBzdG9wLW9wYWNpdHk9IjAuOSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, rgba(84,84,84,0.9) 0%, rgba(53,53,53,0.9) 50%, rgba(41,41,41,0.9) 50%, rgba(15,15,15,0.9) 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(84,84,84,0.9)), color-stop(50%,rgba(53,53,53,0.9)), color-stop(50%,rgba(41,41,41,0.9)), color-stop(100%,rgba(15,15,15,0.9))); background: -webkit-linear-gradient(top, rgba(84,84,84,0.9) 0%,rgba(53,53,53,0.9) 50%,rgba(41,41,41,0.9) 50%,rgba(15,15,15,0.9) 100%); background: -o-linear-gradient(top, rgba(84,84,84,0.9) 0%,rgba(53,53,53,0.9) 50%,rgba(41,41,41,0.9) 50%,rgba(15,15,15,0.9) 100%);  background: -ms-linear-gradient(top, rgba(84,84,84,0.9) 0%,rgba(53,53,53,0.9) 50%,rgba(41,41,41,0.9) 50%,rgba(15,15,15,0.9) 100%); background: linear-gradient(to bottom, rgba(84,84,84,0.9) 0%,rgba(53,53,53,0.9) 50%,rgba(41,41,41,0.9) 50%,rgba(15,15,15,0.9) 100%);
+}
+div.mq-icon {
+  width: 97px; height: 50px; float: left; background: url(images/layout/core-sprites.png) -58px 3px no-repeat; margin: 0 0 0 5px; -webkit-background-size: 400px 600px; -moz-background-size: 400px 600px; -o-background-size: 400px 600px; background-size: 400px 600px;
+}
+div.mq-icon a {
+  width: 97px; height: 50px; display: block;
+}
+header.mq-header div.mq-navbtn, header.mq-header div.mq-searchbtn, header.mq-header div.mq-langbtn {
+  width: 16px; height: 16px; float: right; margin: 7px 7px 7px 0; padding: 8px 9px 10px 9px; cursor: pointer; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background-color: #000; background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#000)); background-image: -webkit-linear-gradient(top, #333, #000); background-image: -moz-linear-gradient(top, #333, #000); background-image: -ms-linear-gradient(top, #333, #000); background-image: -o-linear-gradient(top, #333, #000);
+  -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0), 0 1px 0 rgba(255, 255, 255, 0.075); -moz-box-shadow: inset 0 1px 0 rgba(0,0,0,0), 0 1px 0 rgba(255, 255, 255, 0.075); box-shadow: inset 0 1px 0 rgba(0,0,0,0), 0 1px 0 rgba(255, 255, 255, 0.075);
+}
+header.mq-header div.mq-navbtn div.icon-bar {
+  width: 16px; height: 2px; background: #f0f0f0; margin: 3px 0 0 0; -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+header.mq-header div.mq-searchbtn div.icon-search { 
+  width: 16px; height: 18px; background: url(images/layout/core-sprites.png) 0 -217px no-repeat;
+}
+header.mq-header div.mq-langbtn div.flag {
+  width: 16px; height: 11px; float: none; margin: 3px 0 0 0;
+}
+header.mq-header div.mq-langbtn div#flag-list { 
+  width: 34px; height: 150px; position: absolute; top: 35px; left: 0; z-index: 999; display: none;
+}
+header.mq-header div.mq-langbtn div#flag-list div.flag { 
+  margin: 0 0 1px 0; float: left; background-color: #111; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; border: #111 9px solid; border-top-width: 12px; border-bottom-width: 12px;
+}
+div.overlay {
+  width: 100%; position: absolute; top: 0; left: 0; z-index: 450; background: rgba(0,0,0,0.8); display: none;
+}
+
+
+/****************************************
+  ==== NAVIGATION
+****************************************/
+
+header.master-header {
+  width: 200px; height: auto; margin: 0; position: absolute !important; top: 0; left: -260px; z-index: 500 !important; background: #3c3c3c; -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5); -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5); box-shadow: 0 1px 10px rgba(0,0,0,0.7);
+}
+.mq-nav-visible {
+  left: 0px !important; -webkit-transition: all .25s ease-out; -moz-transition: all .25s ease-out; -o-transition: all .25s ease-out; transition: all .25s ease-out;
+}
+header.master-header div.header-wrapper { 
+  width: 100%; height: auto;
+}
+nav.top-nav {
+  width: 100%; height: auto; background: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; 
+}
+nav.top-nav ul {
+  list-style-type: none;
+}
+nav.top-nav ul li, nav.top-nav ul li.tn-icon {
+  width: 100%; height: auto; float: none; text-align: left; margin: 0;
+}
+nav.top-nav ul li a, nav.top-nav ul li.tn-icon a, nav.top-nav ul li a:hover {
+  width: 175px; height: 46px; line-height: 46px; float: left; text-transform: none; opacity: 1; text-shadow: none; text-indent: 0; padding: 0 25px 0 0; position: static;
+  font-family: Helvetica, Arial, sans-serif; font-weight: bold; font-size: 0.875em; text-align: right; border-top: #545454 1px solid; border-bottom: #262626 1px solid;
+  background-color: #333;
+  background: -moz-linear-gradient(top, #474747 0%, #333 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#474747), color-stop(100%,#333)); background: -webkit-linear-gradient(top,  #474747 0%,#333 100%); background: -o-linear-gradient(top, #474747 0%,#333 100%); background: -ms-linear-gradient(top, #474747 0%,#333 100%); background: linear-gradient(to bottom, #474747 0%,#333 100%);
+  -webkit-transition: none; -moz-transition: none; -o-transition: none; transition: none;
+}
+nav.top-nav ul li.tn-icon a { background-position: -99999px !important;  }
+nav.top-nav ul li.tn-download { display: none; }
+nav.top-nav ul li.selected a { 
+  border-top: #56bce5 1px solid; border-bottom: #154362 1px solid; background: #379fc9; background: -moz-linear-gradient(top, #379fc9 0%, #2573a9 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#379fc9), color-stop(100%,#2573a9)); background: -webkit-linear-gradient(top,  #379fc9 0%,#2573a9 100%);background: -o-linear-gradient(top,  #379fc9 0%,#2573a9 100%);background: -ms-linear-gradient(top,  #379fc9 0%,#2573a9 100%);background: linear-gradient(to bottom,  #379fc9 0%,#2573a9 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#379fc9', endColorstr='#2573a9',GradientType=0 );
+}
+nav.top-nav ul li.selected a:before {
+  display: none;
+}
+nav.top-nav ul li ul li a, nav.top-nav ul li.selected ul li a, nav.top-nav ul li ul li a:hover {
+  height: 40px; line-height: 40px; background: #2a2a2a; color: #ccc; font-weight: normal; border-top: 0; border-bottom: #3b3b3b 1px solid; position: relative;
+}
+nav.top-nav ul li ul li:last-child a {
+  border-bottom: 0;
+}
+nav.top-nav ul li.selected ul li:last-child a {
+  border-bottom: #333 1px solid;
+}
+nav.top-nav ul li ul li a:after {
+  content: ""; width: 5px; height: 40px; display: block; background: #2a2a2a; position: absolute; top: 0; right: 0;
+}
+nav.top-nav ul li.selected ul li a:after {
+  background: #666;
+}
+nav.top-nav ul li.selected ul li.selected a:after {
+  background: -moz-linear-gradient(top, #379fc9 0%, #2573a9 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#379fc9), color-stop(100%,#2573a9)); background: -webkit-linear-gradient(top,  #379fc9 0%,#2573a9 100%);background: -o-linear-gradient(top,  #379fc9 0%,#2573a9 100%);background: -ms-linear-gradient(top,  #379fc9 0%,#2573a9 100%);background: linear-gradient(to bottom,  #379fc9 0%,#2573a9 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#379fc9', endColorstr='#2573a9',GradientType=0 );
+}
+nav.sub-nav {
+  display: none;
+}
+
+/****************************************
+  ==== THIRD LEVEL NAVIGATION
+****************************************/
+
+nav.section-nav {
+  width: 100%; padding: 1px 0 14px 0; margin: 0; position: relative; background: #f0f0f0 url(images/layout/nav-shadow.png) 50% bottom no-repeat; overflow: visible;
+}
+nav.section-nav:after {
+  content: ""; width: 100%; height: 5px; display: block; position: absolute; top: 0; border-top: #bbb 1px solid; background: url(images/layout/footer-bg.png) 50% 0 no-repeat;
+}
+nav.section-nav div.g12 {
+  height: 30px; margin: 14px auto 0 auto; float: none; display: block; background: #fff; position: relative; text-align: left; cursor: pointer;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.4);-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.4);box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+nav.section-nav div.g12:after {
+  content: ""; width: 27px; height: 30px; display: block; background: #f0f0f0 url(images/layout/core-sprites.png) 11px -92px no-repeat; border-left: #e6e6e6 1px solid; position: absolute; top: 0; right: 0; z-index: 999;  
+}
+nav.section-nav div.g12 div.label {
+  height: 30px; line-height: 30px; padding: 0 0 0 10px; font-size: 0.875em;
+}
+nav.section-nav ul {
+  width: 100%; list-style-type: none; float: none; position: absolute; top: 37px; left: 0; z-index: 999; background: #fff; display: none;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);-moz-box-shadow: 0 0 10px rgba(0,0,0,0.3);box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+nav.section-nav ul li {
+  width: 100%; float: none; margin: 0; border-bottom: #e6e6e6 1px solid;
+}
+nav.section-nav ul li.hidden {
+  display: block !important;
+}
+nav.section-nav ul li a {
+  height: 36px; line-height: 36px; padding: 0 0 0 10px; float: none; color: #222; text-decoration: none; font-size: 0.8125em; background: #fff none !important;
+}
+nav.section-nav ul li a:hover {
+  text-decoration: none; background: #f0f0f0 !important; color: #222;
+}
+nav.section-nav ul li.selected a, nav.section-nav ul li.selected a:hover {
+  color: #222; font-weight: bold; position: relative; text-decoration: none; background: #f0f0f0 !important;
+}
+nav.section-nav ul li.selected a:before {
+  display: none;
+}
+
+/****************************************
+  ==== FOOTER
+****************************************/
+
+footer div.copy {width: 100%; float: none; text-align: center; padding: 0;}
+footer div.left {width: 100%; float: none; margin: 0 0 15px 0;}
+footer ul { text-align: center; } footer ul li { float: none; display: inline-block; height: 11px; line-height: 11px; }
+footer div.social { width: 100px; float: none; margin: 10px auto 0 auto; clear: both; }
+
+/****************************************
+  ==== SIDEBAR
+****************************************/
+
+div.sidebar {
+  position: static; margin: 0; padding: 10px 0 0 0; border-top: #e6e6e6 2px solid;
+}
+div.sidebar div.ruler-m, div.sidebar div.ruler-t, div.sidebar div.ruler-b {
+  display: none;
+}
+
+/****************************************
+  ==== MISC
+****************************************/
+
+.team-photo, #image-w { height: 200px !important; }
+#image-w img { width: 1689px !important; height: 200px !important; }
+.company nav.section-nav:after, .company-people nav.section-nav:after { display: none !important; }
+.company-union .devices { display:none; } .company-union div.g12 div.faq div.info p { width: 100% !important; }
+.company-jobs .title { width: 100% !important; } .company-jobs .location { float: left !important; }
+.unity-quality .section-nav .g12, .unity-workflow .section-nav .g12 { display: block !important; }
+.unity-quality-rendering div.g1 img { margin: 0 10px 0 0; }
+.gallery-demos-livedemos .smallbtn { margin-bottom: 5px; } .gallery-madewith-trailers #video-title { text-align: center; }
+.gallery-madewith-list div.genres { margin: 0 0 15px 0; }
+.gallery-madewith-list div.genres:after { content: ""; display: block; width: 100%; height: 1px; background: #ddd; position: absolute; bottom: -5px; left: 0; }
+.gallery-madewith-list .blue-btn { float: left !important; }
+div.platform-icon { width: 70px !important; height: 40px !important; }
+.hero div.platform-icon { margin: 98px 0 0px 10px !important; }
+div.platform-icon a, div.platform-icon div.logo { width: 70px !important; height: 40px !important; -webkit-background-size: 700px 40px; -moz-background-size: 12px 11px; -o-background-size: 12px 11px; background-size: 700px 40px; }
+div.platform-icon .ios { background-position: 0px 0; }
+div.platform-icon .android { background-position: -70px 0 !important; }
+div.platform-icon .win { background-position: -140px 0 !important; }
+div.platform-icon .mac { background-position: -210px 0 !important; }
+div.platform-icon .linux { background-position: -280px 0 !important; }
+div.platform-icon .web { background-position: -350px 0 !important; }
+div.platform-icon .flash { background-position: -420px 0 !important; }
+div.platform-icon .ps3 { background-position: -490px 0 !important; }
+div.platform-icon .xbox360 { background-position: -560px 0 !important; }
+div.platform-icon .wiiu { background-position: -630px 0 !important; }
+
+
+/****************************************
+  ==== HERO & BACKGROUNDS
+****************************************/
+
+div.hero {
+  height: 129px;
+}
+.bgslider div.hero {
+  height: 264px !important;
+}
+.bgslider div.captions-bg {
+  width: 100%; height: 133px; position: absolute; top: 201px; left: 0; z-index: -1; background: #222;
+}
+.bgslider div.hero div.slider-captions {
+  margin-top: 165px;
+}
+div.hero div.slider-captions div.caption h1 {
+  padding: 7px 7px; font-size: 1.3em !important; margin: 0 0 5px 0 !important; padding: 0; background: none; color: #fff !important; 
+}
+div.hero div.slider-captions div.caption p, div.hero div.slider-captions div.caption span {
+  margin: 0 0 5px 0 !important; width: 100% !important; padding: 0; background: none; color: #ccc !important;
+}
+.creategames div.captions-bg { height: 72px; }
+.gallery-demos-projects div.hero div.slider-captions, .gallery-madewith-list div.hero div.slider-captions, .gallery-madewith-profiles div.hero div.slider-captions { margin-top: 145px !important; }
+.gallery div.captions-bg, .gallery-madewith-list div.captions-bg, .gallery-madewith-profiles div.captions-bg { height: 118px; }
+
+.company-pr-fastfacts div.hero { height: 129px; }
+
+.company div.hero, .company-people div.hero { height: 0; margin-bottom: 185px !important; }
+.company-reseller div.background { height: 245px !important; }
+.company-reseller div.hero { height: 162px; }
+.company-union div.hero { height: 202px; }
+
+.webplayer div#windows { background-position: right bottom !important; -webkit-background-size: 84px 71px !important; -moz-background-size: 84px 71px !important; -o-background-size: 84px 71px !important; background-size: 84px 71px !important; }
+.webplayer div#osx { background-position: right bottom !important; -webkit-background-size: 78px 72px !important; -moz-background-size: 84px 71px !important; -o-background-size: 84px 71px !important; background-size: 84px 71px !important; } 
+.unite-archive div.text { font-size: 0.85em !important; text-align: left; } .unite-archive div.text p { font-size: 1em !important; }
+
+.company-reseller-find header, .company-reseller-find nav.section-nav { z-index: 500 !important; position: absolute !important; }
+.company-reseller-find div.map { height: 350px !important; }
+.company-reseller-find div.hero { height: 331px !important; }
+.creategames div.hero { height: 188px !important; }
+.unity-performance  div.hero, .contest-flash div.hero, .company-jobs div.hero, .unity-mecanim div.hero, .unity div.hero { height: 114px; }
+.gallery div.hero { height: 233px !important; }
+.gallery-demos-projects div.hero, .gallery-madewith-list div.hero, .gallery-madewith-profiles div.hero { height: 249px !important; }
+.gallery-madewith-profile div.hero  { height: 129px !important; }
+div.background { height: 200px !important; }
+.error nav.section-nav, .home nav.section-nav, .creategames nav.section-nav, .company nav.section-nav, .company-jobs nav.section-nav, .company-people nav.section-nav, .contest-flash nav.section-nav,
+.assetstore nav.section-nav, .assetstore-onlineservices nav.section-nav, .assetstore-submit nav.section-nav, .unity-collaboration nav.section-nav, .sim nav.section-nav,
+.unity-performance nav.section-nav, .unity-mecanim nav.section-nav, .unity nav.section-nav, .whypro nav.section-nav, .gallery nav.section-nav 
+{ background-color: transparent !important; }
+.contest-flash nav.section-nav { background: none !important; }
+.error nav.section-nav:after, .home nav.section-nav:after,.company-jobs nav.section-nav:after, .creategames nav.section-nav:after, .assetstore nav.section-nav:after, .assetstore-onlineservices nav.section-nav:after, .assetstore-submit nav.section-nav:after,
+.contest-flash nav.section-nav:after, .sim nav.section-nav:after, .unity-performance nav.section-nav:after, .unity-mecanim nav.section-nav:after, .unity nav.section-nav:after, .whypro nav.section-nav:after, .gallery nav.section-nav:after 
+{ display: none; }
+
+.whypro div.hero { height: 208px !important; }
+.whypro .captions-bg { height: 93px !important; }
+
+.unity div.background { background: url(images/elements/backgrounds/overview-m.jpg) 50% 0 no-repeat;}
+.unity-quality div.background { background: #222 url(images/elements/backgrounds/sunshafts-m.jpg) 50% 0 no-repeat;}
+.unity-quality-specialeffects div.background { background: url(images/elements/backgrounds/special-effects-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-audio div.background { background: url(images/elements/backgrounds/fract-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-materials div.background { background: url(images/elements/backgrounds/materials-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-ai div.background { background: url(images/elements/backgrounds/cubemen-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-physics div.background { background: url(images/elements/backgrounds/csr-racing-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-lighting div.background { background: url(images/elements/backgrounds/lighting-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-rendering div.background {background: url(images/elements/backgrounds/butterfly-sf-hill.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-quality-terrains div.background { background: url(images/elements/backgrounds/terrain-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow div.background { background: #222 url(images/elements/backgrounds/workflow.jpg) 50% 0 no-repeat;}
+.unity-workflow-integrated-editor div.background { background: url(images/elements/backgrounds/integrated-editor-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow-asset-workflow div.background { background: url(images/elements/backgrounds/escape-plan-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow-scene-building div.background { background: url(images/elements/backgrounds/endless-space-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow-rapid-iteration div.background { background: url(images/elements/backgrounds/oliver-spike-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow-programming div.background { background: url(images/elements/backgrounds/splice-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-workflow-networking div.background { background: url(images/elements/backgrounds/guns-of-icarus-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-mecanim div.background { background: url(images/elements/backgrounds/mecanim-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-performance div.background { background: url(images/elements/backgrounds/shadowgun-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-multiplatform div.background { background: url(images/elements/backgrounds/multiplatform.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-multiplatform-mobile div.background { background: url(images/elements/backgrounds/bad-piggies-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-multiplatform-desktop div.background { background: url(images/elements/backgrounds/pid-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-multiplatform-web div.background { background: url(images/elements/backgrounds/robot-rising-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-multiplatform-consoles div.background { background: url(images/elements/backgrounds/rochard-gameplay-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-collaboration div.background { background-image: url(images/elements/backgrounds/collaboration-m.jpg); }
+.unity-download-thanks div.background { background: url(images/elements/backgrounds/thankyou.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.unity-whatsnew-latest div.background { height: 400px; background: url(images/elements/backgrounds/medieval-village-m.jpg) 50% 0 no-repeat;}
+.gallery-madewith-profiles div.background div.b, .gallery-demos-projects div.background div.b { background-repeat: no-repeat; -webkit-background-size: auto; -moz-background-size: auto; -o-background-size: auto; background-size: auto; }
+.assetstore div.background, .assetstore-onlineservices div.background, .assetstore-submit div.background { background-image: url(images/elements/backgrounds/assetstore-m.jpg); }
+.assetstore div.hero, .assetstore-onlineservices div.hero, .assetstore-submit div.hero { height: 64px; }
+.company-pr-fastfacts div.background { background: url(images/elements/backgrounds/clouds-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.company-reseller div.background { background: #222 url(images/elements/backgrounds/worldmap-dark.jpg) 50% 0 no-repeat; }
+.company-union div.background { height: 273px !important; background: url(images/elements/backgrounds/hexagon-bg.png) 50% 0 repeat-y; }
+.company-jobs div.background { background: url(images/elements/backgrounds/developers-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.company-events-gdc13 div.background { background: url(images/elements/backgrounds/gdc13-m.png) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.company-events-gdc13 div.hero { height: 129px; }
+.contest-flash div.background { background: url(images/elements/backgrounds/taildrift-m.jpg) 50% 0 no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.error div.background { height: 93px; background: #f0f0f0; }
+
+.unite-unite div.background { background: url(images/elements/backgrounds/unite/2013/unite2013-m.png) 50% 0 no-repeat; }
+.unite13-vancouver div.background { background: url(images/elements/backgrounds/unite/2013/vancouver-m.png) 50% 0 no-repeat; }
+.unite13-nordic div.background { background: url(images/elements/backgrounds/unite/2013/nordic-m.jpg) 50% 0 no-repeat; }
+.unite13-china div.background { background: url(images/elements/backgrounds/unite/2013/china-new-m.jpg) 50% 0 no-repeat; }
+
+} /* End Media Query */
+
+
+/* Retina  */
+@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+
+nav.section-nav, nav.section-nav ul li a { background-image: url(images/layout/nav-shadow@2x.png); -webkit-background-size: 1268px 5px; -moz-background-size: 1268px 5px; -o-background-size: 1268px 5px; background-size: 1268px 5px;}
+footer { background-image: url(images/layout/footer-bg@2x.png); -webkit-background-size: 1268px 5px; -moz-background-size: 1268px 5px; -o-background-size: 1268px 5px; background-size: 1268px 5px; }
+ul.l li, div.lang div.flag, nav.top-nav ul li.tn-icon a, div.section-header div.poster div.play, footer div.social a.icon, div.bottombar .icon, div.mq-icon, 
+div.select-box div.label:after, div.sticky-top, div.play, div.plus, div.zoom, a.expand, a.expanded, div.prev, div.next, .flex-direction-nav a, nav.section-nav div.g12:after, 
+.fancybox-close, .fancybox-nav span, div.video div.video-gui div.i, .home .more a span, .unity-whatsnew div.notes ul.l li, .company-reseller-find div.mapicon,
+div.post-full div.edit-post a, div.comment div.edit-comment a, div.sidebar ul li a, div.sidebar div.block-tube-channels ul li a, div.mq-searchbtn div.icon-search { 
+  background-image: url(images/layout/core-sprites@2x.png); -webkit-background-size: 400px 600px; -moz-background-size: 400px 600px; -o-background-size: 400px 600px; background-size: 400px 600px;
+}
+div.loading, #fancybox-loading div { 
+  background-image: url(images/elements/loading@2x.gif); -webkit-background-size: 12px 11px; -moz-background-size: 12px 11px; -o-background-size: 12px 11px; background-size: 12px 11px;
+}
+.unity-workflow-asset-workflow table.support td.check, .unity-license table td.check {
+  background-image: url(images/elements/icons/checkmark@2x.png); -webkit-background-size: 12px 11px; -moz-background-size: 12px 11px; -o-background-size: 12px 11px; background-size: 12px 11px;
+}
+div.platform-icon a, div.platform-icon div.logo {
+  background-image: url(images/elements/multiplatform-logos@2x.png); -webkit-background-size: 1400px 80px; -moz-background-size: 1400px 80px; -o-background-size: 1400px 80px; background-size: 1400px 80px;
+}
+.assetstore div#assets div.rating, .assetstore div#assets div.rating div.stars {
+  background-image: url(images/elements/icons/as-rating@2x.png); -webkit-background-size: 56px 22px; -moz-background-size: 56px 22px; -o-background-size: 56px 22px; background-size: 56px 22px;
+}
+div.share-block div.share-box-twitter, div.share-block div.share-box-fb {
+  background-image: url(images/elements/share-icons@2x.png); -webkit-background-size: 48px 22px; -moz-background-size: 48px 24px; -o-background-size: 48px 24px; background-size: 48px 24px;
+}
+
+div.social a.twitter {background-position: 0px -59px !important;}
+
+div.social a.facebook {background-position: -24px -59px !important; opacity: 0;}
+
+.toolbtn span { 
+  background-image: url(images/layout/toolbtn-sprites@2x.png); -webkit-background-size: 280px 56px; -moz-background-size: 280px 56px; -o-background-size: 280px 56px; background-size: 280px 56px;
+}
+.mq-nav-visible nav.top-nav ul li.tn-icon a { background-image: none; }
+}
+
+
+
+
+
+
+

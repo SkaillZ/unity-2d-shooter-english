@@ -1,0 +1,539 @@
+<html xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- base href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html" --><style type="text/css">body { margin-left:0;margin-right:0;margin-top:0; }#google-cache-hdr {background:#f5f5f5 !important;font:13px arial,sans-serif !important;text-align:left !important;color:#202020 !important;border:0 !important;margin:0 !important;border-bottom:1px solid #cecece !important;line-height:16px !important ;padding:16px 28px 24px 28px !important;}#google-cache-hdr * {display:inline !important;font:inherit !important;text-align:inherit !important;color:inherit !important;line-height:inherit !important;background:none !important;border:0 !important;margin:0 !important;padding:0 !important;letter-spacing:0 !important;}#google-cache-hdr a {text-decoration:none !important;color:#1a0dab !important;}#google-cache-hdr a:hover { text-decoration:underline !important; }#google-cache-hdr a:visited { color:#609 !important; }#google-cache-hdr div { display:block !important;margin-top:4px !important; }#google-cache-hdr b {font-weight:bold !important;display:inline-block !important;direction:ltr !important;}</style></head><body class="developer-document" onload="addClass();prettyPrint()"><div id="google-cache-hdr" dir="ltr"><div>Dies ist der Cache von Google von <a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html" dir="ltr">http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html</a>. Es handelt sich dabei um ein Abbild der Seite, wie diese am 5. Okt. 2015 05:51:17 GMT angezeigt wurde. </div><div>Die <a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html" dir="ltr">aktuelle Seite</a> sieht mittlerweile eventuell anders aus. <a href="http://support.google.com/websearch/bin/answer.py?hl=de&amp;p=cached&amp;answer=1687222">Weitere Informationen</a></div><div></div><div><span style="display:inline-block !important;margin-top:8px !important;margin-right:104px !important;white-space:nowrap !important;"><span style="margin-right:28px !important;"><span style="font-weight:bold !important;">Vollständige Version</span></span><span style="margin-right:28px !important;"><a href="http://webcache.googleusercontent.com/search?q=cache:8Jdn0gm1ifYJ:japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html&amp;hl=de&amp;gl=at&amp;strip=1&amp;vwsrc=0">Nur-Text-Version</a></span><span style="margin-right:28px !important;"><a href="http://webcache.googleusercontent.com/search?q=cache:8Jdn0gm1ifYJ:japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html&amp;hl=de&amp;gl=at&amp;strip=0&amp;vwsrc=1">Quelle anzeigen</a></span></span><span style="display:inline-block !important;margin-top:8px !important;color:#717171 !important;">Tipp: Um Ihren Suchbegriff schnell auf dieser Seite zu finden, drücken Sie <b>Strg+F</b> bzw. <b>⌘-F</b> (Mac) und verwenden Sie die Suchleiste.</span></div></div><div style="position:relative;">
+
+
+
+
+   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <!-- InstanceEndEditable -->
+  <link rel="shortcut icon" href="http://japan.unity3d.com/resources/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="http://japan.unity3d.com/resources/favicons/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon.png">
+
+  <!-- META -->
+  <meta name="description" content="Unity は、Windows と OS X 上で動作する統合型のゲーム開発環境です。iOS、Android、Windows、Mac OS X、Web、Wii U、PlayStation3、Xbox 360 など様々なプラットフォームへ向けた高度な 3D アプリケーションを制作することが出来ます。">
+  <meta name="author" content="Unity Technologies">
+  <meta property="og:title" content="Unity: 統合ゲーム開発環境">
+  <meta property="og:type" content="company">
+  <meta property="og:url" content="http://japan.unity3d.com/">
+  <meta property="og:image" content="http://japan.unity3d.com/resources/favicons/fb-icon.png">
+  <meta property="og:description" content="Unity は、スマートフォンや PC、Webブラウザ、コンシューマ機上でハイクオリティーなゲームを実現する開発プラットフォームです。">
+  <meta property="og:site_name" content="Unity Japan 公式サイト">
+
+  <!-- ASSETS -->
+  <script src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/ga.js" async="" type="text/javascript"></script><script src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/jquery_002.js" type="text/javascript"></script>
+  <script type="text/javascript" src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/unity-core.js"></script>
+  <link rel="stylesheet" type="text/css" href="Making%20Sprites%20and%20Sprite%20Animations-Dateien/core.css">
+  <link rel="stylesheet" type="text/css" href="Making%20Sprites%20and%20Sprite%20Animations-Dateien/resp.css">
+  <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/resources/stylesheets/ie.css" /><![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://unity3d.com/news.rss">
+  <!-- InstanceBeginEditable name="header" -->
+    <script type="text/javascript" src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/jquery.js"></script>
+  <!-- InstanceEndEditable -->
+  <link rel="stylesheet" type="text/css" href="Making%20Sprites%20and%20Sprite%20Animations-Dateien/index.css">
+  <link rel="stylesheet" type="text/css" href="Making%20Sprites%20and%20Sprite%20Animations-Dateien/jp.css">
+  <link rel="stylesheet" type="text/css" href="Making%20Sprites%20and%20Sprite%20Animations-Dateien/prettify.css">
+  <link rel="stylesheet" type="text/css" href="Making%20Sprites%20and%20Sprite%20Animations-Dateien/style.css">
+  <script type="text/javascript" src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/prettify.js"></script>
+  
+  <script type="text/javascript">
+    function addClass(){
+        $(".source-code pre").addClass("prettyprint");
+    }
+  </script>
+  <title>Making Sprites and Sprite Animations</title>
+
+
+  <div id="master-wrapper">
+  <div class="background"></div>
+  <header id="master-header" class="master-header" role="main-header">
+    <div class="header-wrapper">
+      <div class="lang">
+        <div class="lbl animate" data-values="lang-selector|width|105|1">言語を切り替え</div>
+        <div class="flag flag-jp current tt" data-distance="38|28|bottom"><div class="tip">日本語</div></div>
+        <div id="lang-selector" class="lang-selector">
+          <div class="flag flag-en tt" data-distance="38|28|bottom"><a href="http://unity3d.com/"></a><div class="tip">English</div></div>
+          <div class="flag flag-cn tt" data-distance="38|28|bottom"><a href="http://china.unity3d.com/"></a><div class="tip">中文</div></div>
+          <div class="flag flag-es tt" data-distance="38|28|bottom"><a href="http://spanish.unity3d.com/"></a><div class="tip">Español</div></div>
+          <div class="flag flag-kr tt" data-distance="38|28|bottom"><a href="http://www.unity3dkorea.com/"></a><div class="tip">한국어</div></div>
+          <div class="flag flag-pt tt" data-distance="38|28|bottom"><a href="http://portuguese.unity3d.com/"></a><div class="tip">Portugués</div></div>
+          <div class="flag flag-ru tt" data-distance="38|28|bottom"><a href="http://russia.unity3d.com/"></a><div class="tip">Pусский</div></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <nav class="top-nav">
+        <ul>
+          <li class="tn-icon"><a href="http://japan.unity3d.com/">Home</a></li>
+          <li class="tn-unity"><a href="http://japan.unity3d.com/unity">Unity</a></li>
+          <li class="tn-gallery"><a href="http://japan.unity3d.com/gallery">Gallery</a></li>
+          <li class="tn-store"><a href="http://japan.unity3d.com/store">Store</a></li>
+          <li class="tn-assetstore"><a href="http://japan.unity3d.com/asset-store">Asset Store</a></li>
+          <li class="tn-developer selected"><a href="http://japan.unity3d.com/developer">Developer</a></li>
+          <li class="tn-company"><a href="http://japan.unity3d.com/company">Company</a></li>
+          <li class="tn-download"><a href="http://japan.unity3d.com/unity/download">Download</a></li>
+        </ul>
+      </nav>
+      <nav class="sub-nav">
+        <ul id="sn-unity" style="display:none;">
+          <li class="sn-unity-workflow jp"><a href="http://japan.unity3d.com/unity/workflow">ワークフロー</a></li>
+          <li class="sn-unity-quality jp"><a href="http://japan.unity3d.com/unity/quality">クオリティー</a></li>
+          <li class="sn-unity-mecanim"><a href="http://japan.unity3d.com/unity/mecanim">Mecanim</a></li>
+          <li class="sn-unity-performance jp"><a href="http://japan.unity3d.com/unity/performance">パフォーマンス</a></li>
+          <li class="sn-unity-multiplatform jp"><a href="http://japan.unity3d.com/unity/multiplatform">マルチプラットフォーム</a></li>
+          <li class="sn-unity-collaboration jp"><a href="http://japan.unity3d.com/unity/collaboration">コラボレーション</a></li>
+          <li class="sn-unity-whatsnew jp"><a href="http://japan.unity3d.com/unity/whats-new">アップデート情報</a></li>
+        </ul>
+        <ul id="sn-gallery" style="display:none;">
+          <li class="sn-gallery-madewith"><a href="http://japan.unity3d.com/gallery/made-with-unity/game-list">Made With Unity</a></li>
+          <li class="sn-gallery-demos"><a href="http://japan.unity3d.com/gallery/demos">Demos By Unity</a></li>
+        </ul>
+        <ul id="sn-assetstore" style="display:none;">
+          <li class="sn-assetstore-browse"><a href="https://www.assetstore.unity3d.com/" target="_blank">ブラウズ</a></li>
+          <li class="sn-assetstore-onlineservices jp"><a href="http://japan.unity3d.com/asset-store/online-services">オンラインサービス</a></li>
+          <li class="sn-assetstore-submit jp"><a href="http://japan.unity3d.com/asset-store/submit-content">コンテンツ提出</a></li>
+        </ul>
+        <ul id="sn-developer">
+          <li class="sn-developer-document jp selected"><a href="http://japan.unity3d.com/developer/document">ドキュメント</a></li>
+          <li class="sn-developer-resource jp"><a href="http://japan.unity3d.com/developer/resource">リソース</a></li>
+        </ul>
+        <ul id="sn-community" style="display:none;">
+          <li class="sn-community-forum jp"><a href="http://forum.unity3d.com/" target="_blank">フォーラム</a></li>
+          <li class="sn-community-answers jp"><a href="http://answers.unity3d.com/" target="_blank">アンサー</a></li>
+          <li class="sn-community-feedback jp"><a href="http://feedback.unity3d.com/" target="_blank">フィードバック</a></li>
+        </ul>
+        <ul id="sn-company" style="display:none;">
+          <li class="sn-company-people jp"><a href="http://japan.unity3d.com/company/people">スタッフ</a></li>
+          <li class="sn-company-jobs jp"><a href="http://japan.unity3d.com/company/jobs/overview">採用情報</a></li>
+          <li class="sn-company-events jp"><a href="http://japan.unity3d.com/company/events">イベント</a></li>
+          <li class="sn-company-pr jp"><a href="http://japan.unity3d.com/company/public-relations">広報</a></li>
+          <li class="sn-company-union jp"><a href="http://japan.unity3d.com/company/union">Union</a></li>
+          <li class="sn-company-reseller jp"><a href="http://japan.unity3d.com/company/reseller">代理店</a></li>
+          <li class="sn-company-blog jp"><a href="http://japan.unity3d.com/blog">ブログ</a></li>
+          <li class="sn-company-access jp"><a href="http://japan.unity3d.com/company/access">アクセス</a></li>
+          <li class="sn-company-contact jp"><a href="http://japan.unity3d.com/company/contact">お問い合わせ</a></li>
+          <li class="sn-company-legal jp"><a href="http://japan.unity3d.com/company/legal">リーガル</a></li>
+        </ul>
+        <ul id="sn-unite" style="display:none;">
+          <li class="sn-unite-unite"><a href="http://japan.unity3d.com/unite/">Unite 2014</a></li>
+          <li class="sn-unite-archive"><a href="http://japan.unity3d.com/unite/archive">アーカイブ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="content-container" class="content-container">
+    <header class="mq-header clear">
+      <div class="mq-icon"><a href="http://japan.unity3d.com/developer/"></a></div>
+      <div class="mq-langbtn rel">
+        <div class="flag flag-jp"></div>
+        <div id="flag-list"></div>
+      </div>
+       <div class="mq-navbtn"><div class="icon-bar"></div><div class="icon-bar"></div><div class="icon-bar"></div></div>
+    </header>
+    <!-- InstanceBeginEditable name="main-content" -->
+      <div class="hero"><div class="sams"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/">Shooting Game</a></div></div>
+      <nav class="section-nav">
+        <div class="g12"><div class="wrap"><h2></h2>
+          <ul>
+            
+              
+              <li class="selected"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html">cp01</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/02.html">cp02</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/03.html">cp03</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/04.html">cp04</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/05.html">cp05</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html">cp06</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/07.html">cp07</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/08.html">cp08</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/09.html">cp09</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/10.html">cp10</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/11.html">cp11</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/12.html">cp12</a></li>
+          <li class="top"></li></ul>
+        </div></div>
+      </nav>
+
+    <section id="content" class="content-wrapper gw clear 2d-shooting-game">
+
+
+      <!-- <nav class="quickjump shrink pos-fix" data-pos-fix-off-y="50">
+        <div class="header">
+          <h3>Quick jump:</h3>
+          <div class="clear"></div>
+        </div>
+        <ul class="simple">
+          <li><a href="#ss01">第 1 回　世界の「骨格」をつくろう</a></li>
+          <li><a href="#ss02">Unity を手に入れる</a></li>
+          <li><a href="#ss03">Unity の統合開発環境</a></li>
+          <li><a href="#ss04">必要なパーツを配置しよう</a></li>
+          <li><a href="#ss05">はじめてのスクリプト</a></li>
+          <li><a href="#ss06">まとめと次回のテーマ</a></li>
+          <li><a href="#ss07">プロジェクトファイルをダウンロード</a></li>
+        </ul>
+      </nav> -->
+
+<section class="content">
+
+       <article>
+        <div style="float:right"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game/game/01.html">日本語</a> | English</div>
+        <div class="clear"></div>
+      </article>
+
+
+    <h1><a id="h1"></a>Chapter 1. Making Sprites and Sprite Animations</h1>
+<div class="column">
+
+<h3><a id="column-1"></a>Sprite</h3>
+<p>Sprites provide the graphics for items and characters that appear in 2D games.</p>
+<p>For detailssou, see the <a href="http://docs.unity3d.com/Documentation/ScriptReference/Sprite.html" class="link">Sprite</a> and <a href="http://docs.unity3d.com/Documentation/Components/class-SpriteRenderer.html" class="link">SpriteRenderer</a> documentation pages.</p>
+</div>
+
+<h2><a id="h1-1"></a>1.1. Use the Sprite Editor to Make Multiple Sprites From One Texture</h2>
+<p>In the Project View, open the <tt class="inline-code">Sprites/Spaceship</tt> folder and select <b>Spaceship</b>.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/selected_texture.png" alt="Using the mouse to select the Spaceship.">
+<p class="caption">
+Figure 1.1: Using the mouse to select the Spaceship.
+</p>
+</div>
+
+<h3><a id="h1-1-1"></a>Review the Texture Import Settings</h3>
+<p>In 2D mode, textures will be imported as Sprites.</p>
+<p>If <b>Texture Type</b> is set to Texture, change it to Sprite and click <b>Apply</b> as shown in Figure 1.2.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/tis.png" alt="Setting the Texture Type to Sprite">
+<p class="caption">
+Figure 1.2: Setting the Texture Type to Sprite
+</p>
+</div>
+<p>To turn this one Texture into multiple Sprites, go to its Texture Import Settings, set <b>Sprite Mode</b> to <b>Multiple</b>, and <b>Pixels To Units</b> to <b>50</b>.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/sprite_multiple.png" alt="Texture Import Settings for the Spaceship texture.">
+<p class="caption">
+Figure 1.3: Texture Import Settings for the Spaceship texture.
+</p>
+</div>
+<div class="column">
+
+<h3><a id="column-2"></a>Pixels To Units</h3>
+<p>Unity measures length in Units. You can think of it as 1 unit to 1 meter.</p>
+<p>“Pixels to Units” sets the ratio between screen pixels and game units.</p>
+
+<h4><a id="h1-1-1-1"></a>When Pixels To Units Is 1</h4>
+<p>One game unit becomes the same size as 1 pixel.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/1pixel_unit.png" alt="">
+</div>
+
+<h4><a id="h1-1-1-2"></a>When Pixels To Units Is 100</h4>
+<p>One game unit becomes the same size as 100 pixels.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/100pixel_unit.png" alt="">
+</div>
+</div>
+<p>Click the <b>SpriteEditor</b> button in Texture Import Settings to open up the SpriteEditor.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/sprite_editor.png" alt="The Sprite Editor">
+<p class="caption">
+Figure 1.4: The Sprite Editor
+</p>
+</div>
+<div class="column">
+
+<h3><a id="column-3"></a>SpriteEditor</h3>
+<p>Sprites can contain a single graphic, but it’s more efficient to pack
+ many graphics into one. You can do this with the Sprite Editor.</p>
+<p>For details, see the <a href="http://docs.unity3d.com/Documentation/Manual/SpriteEditor.html" class="link">SpriteEditor</a> documentation page.</p>
+</div>
+
+<h3><a id="h1-1-2"></a>Dividing Along a Grid</h3>
+<p>Let’s make multiple Sprites from a single Texture. In the upper right, click Slice.</p>
+<p>Change the Type from Automatic to Grid.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/automatic_to_grid.png" alt="Changing the Type in the Sprite Editor">
+<p class="caption">
+Figure 1.5: Changing the Type in the Sprite Editor
+</p>
+</div>
+<p>Change the <b>Pixel Size</b> to <b>X 48 Y 48</b>.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/pixel_size_48.png" alt="Setting the Pixel Size">
+<p class="caption">
+Figure 1.6: Setting the Pixel Size
+</p>
+</div>
+<p>Click <b>Slice</b>, confirm that the lines properly frame the textures, and press the <b>Apply</b> button.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/sprite_editor_apply.png" alt="A grid is superimposed over the texture.">
+<p class="caption">
+Figure 1.7: A grid is superimposed over the texture.
+</p>
+</div>
+<p>If your Project View looks like Figure 1.8, everything is OK.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/sprite_spaceship_prjectview.png" alt="The Spaceship resource in the Project View.">
+<p class="caption">
+Figure 1.8: The Spaceship resource in the Project View.
+</p>
+</div>
+
+<h2><a id="h1-2"></a>1.2. Animating the Player’s Ship</h2>
+<p>Let's use Unity to make the animation shown in Figure 1.9.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/player_gif.gif" alt="A GIF of the desired animation." width="20%">
+<p class="caption">
+Figure 1.9: A GIF of the desired animation.
+</p>
+</div>
+
+<h3><a id="h1-2-1"></a>Making Animation Controller and Animation Clip Files</h3>
+<p>AnimatorController and AnimationClip files are created when dragging 
+and dropping multiple Sprites onto the Scene View.Drag the set of items 
+from <b>Spaceship_0</b> to <b>Spaceship_3</b> and drop them into the Scene View.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/drag_sprites_player.png" alt="Dragging and dropping the first Spaceship into the scene.">
+<p class="caption">
+Figure 1.10: Dragging and dropping the first Spaceship into the scene.
+</p>
+</div>
+<p>Now, a dialog box will appear where you can name and save the animation file.</p>
+<p>Save it as <tt class="inline-code">Normal</tt> in the <tt class="inline-code">Animations/Player</tt> folder.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/new_animation_dialog.png" alt="Saving to the Animations/Player folder.">
+<p class="caption">
+Figure 1.11: Saving to the Animations/Player folder.
+</p>
+</div>
+<p>Find the game object named <tt class="inline-code">Spaceship_0</tt>, and change its name to <tt class="inline-code">Player</tt>.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/player_name.png" alt="The new Player game object.">
+<p class="caption">
+Figure 1.12: The new Player game object.
+</p>
+</div>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/player_animation_name.png" alt="The new Player resource.">
+<p class="caption">
+Figure 1.13: The new Player resource.
+</p>
+</div>
+<div class="column">
+
+<h3><a id="column-4"></a>Changing the Name of a Game Object</h3>
+<p>There are two ways to change the name of a game object.</p>
+<p>1. Changing the name in the top of the Inspector</p>
+<p>When selecting a game object, the Inspector displays various 
+information about it. At the top, its name is an editable text field. 
+Change the name, and press Enter.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/rename_1.png" alt="Changing a game object’s name in the Inspector">
+<p class="caption">
+Figure 1.14: Changing a game object’s name in the Inspector
+</p>
+</div>
+<p>2. Changing the name in the Hierarchy</p>
+<p>Select a game object in the Hierarchy, press Enter, and the name will become editable. Change the name, and press Enter.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/rename_2.png" alt="Changing a game object’s name in the Hierarchy">
+<p class="caption">
+Figure 1.15: Changing a game object’s name in the Hierarchy
+</p>
+</div>
+</div>
+<p>Okay, our sprite animation is already done.</p>
+<p>Press the Play button, and see what happens!</p>
+
+<h2><a id="h1-3"></a>1.3. Animating the Enemies</h2>
+<p>Now we’ll use Unity to make an animation like that in Figure 1.16.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/enemy_gif.gif" alt="A GIF of the desired animation." width="20%">
+<p class="caption">
+Figure 1.16: A GIF of the desired animation.
+</p>
+</div>
+<p>Like before, select the 4 items <b>Spaceship_4</b> through <b>Spaceship_7</b>, drag them to the scene view, and create an AnimatorController and AnimationClip.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/drag_sprites_enemy.png" alt="Creating the second Spaceship animation.">
+<p class="caption">
+Figure 1.17: Creating the second Spaceship animation.
+</p>
+</div>
+<p>Set the name of this one to <b>Enemy</b>.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/enemy_name.png" alt="Naming the enemy game object.">
+<p class="caption">
+Figure 1.18: Naming the enemy game object.
+</p>
+</div>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/enemy_animation_name.png" alt="Naming the enemy resource">
+<p class="caption">
+Figure 1.19: Naming the enemy resource
+</p>
+</div>
+
+<h2><a id="h1-4"></a>1.4. Making the Bullets</h2>
+<p>Open the <tt class="inline-code">Bullet</tt> in the Sprite Editor, and set its Sprite Mode to Multiple.のSprite ModeをMultipleにしてSprite Editorを開きましょう。</p>
+<p>Set the Type to Grid, and the Pixel Size to <b>X 16 Y 16</b>.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/sprite_bullet.png" alt="Configuring the Bullet sprite.">
+<p class="caption">
+Figure 1.20: Configuring the Bullet sprite.
+</p>
+</div>
+<p>Slice the sprite and press <b>Apply</b>.</p>
+
+<h2><a id="h1-5"></a>1.5. The Explosion Animation</h2>
+<p>Let's make an animation that looks like this:</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/explosion_gif.gif" alt="A GIF of the desired animation." width="20%">
+<p class="caption">
+Figure 1.21: A GIF of the desired animation.
+</p>
+</div>
+<p>Open the <tt class="inline-code">Explosion</tt> in the Sprite Editor, and set its Sprite Mode to Multiple.</p>
+<p>Set the Type to Grid, and the Pixel Size to <b>X 80 Y 80</b>.</p>
+<p>Slice the sprite and press <b>Apply</b>.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/sprite_explosion.png" alt="Slicing the Explosion sprite.">
+<p class="caption">
+Figure 1.22: Slicing the Explosion sprite.
+</p>
+</div>
+<p>In the same way as the two ships, select <b>Explosion_0</b> through <b>Explosion_10</b>, and drop them into the scene, creating an AnimationClip and AnimatorController. Name the Animation <tt class="inline-code">Explode</tt>.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/drag_sprites_explosion.png" alt="Creating the Explosion game object.">
+<p class="caption">
+Figure 1.23: Creating the Explosion game object.
+</p>
+</div>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/explosion_animation_name.png" alt="Creating the Explosion resource.">
+<p class="caption">
+Figure 1.24: Creating the Explosion resource.
+</p>
+</div>
+
+<h3><a id="h1-5-1"></a>Creating a Prefab</h3>
+<p>Let's take the <b>Player</b>, <b>Enemy</b>, and <b>Explosion</b> that we made, and create <b>Prefabs</b> out of them.</p>
+<p>Make a folder named Prefabs, and drag each game object, one by one, into the folder.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/create_prefabs.png" alt="Drag each of these game objects, one by one, into the Prefabs folder.">
+<p class="caption">
+Figure 1.25: Drag each of these game objects, one by one, into the Prefabs folder.
+</p>
+</div>
+<p>Once you’ve made those three prefabs, you can delete the original game objects out of the scene.</p>
+<p>Right-click the game objects in the Hierarchy, and select <b>Delete</b> from the menu that appears.</p>
+<p></p><div style="display:flex"><p></p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/delete_menu.png" alt="" width="90%">
+</div>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/delete_gameobject.png" alt="" width="90%">
+</div>
+<p></p></div><p></p>
+<div class="column">
+
+<h3><a id="column-5"></a>Prefab</h3>
+<p>A game object that’s been saved as an asset is called a Prefab.</p>
+<p>Game Object -&gt; Prefab</p>
+<p>Easily make game objects with the same contents.</p>
+<div class="image">
+<img src="Making%20Sprites%20and%20Sprite%20Animations-Dateien/prefab.jpg" alt="">
+<p class="caption">
+Figure 1.26: 
+</p>
+</div>
+<p>For details, see the <a href="http://docs.unity3d.com/Documentation/Manual/Prefabs.html" class="link">Prefabs</a> section of the documentation.</p>
+</div>
+
+
+    
+      <h3>End of Chapter 01</h3>
+      <p>That’s all for this section. If you had problems, you can 
+download the example project up to this point, and start fresh on the 
+next chapter.</p>
+      <p></p><section class="ss12" id="ss12"><a class="blue-btn" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/project/01_ShootingGame.zip">Download This Chapter’s Project File</a></section><p></p>
+    
+
+</section>
+<!-- ページング -->
+<nav class="paging with-top">
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <a class="prev" rel="prev" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/">Top</a>
+  <a class="next" rel="next" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/02.html">Chapter 02</a>
+  
+</nav>
+Page last updated: 2014-04-25
+  
+</section>
+
+    <script type="text/javascript">
+      renderMenu('developer/document');
+      hljs.initHighlightingOnLoad();
+    </script>
+
+<!-- InstanceEndEditable --><!-- #BeginLibraryItem "/Library/footer-hd.lbi" --> <footer>
+    <div class="footer-wrapper clear">
+      <div class="left">
+        <div class="copy">Copyright ©2015 Unity Technologies Japan G.K. All Rights Reserved</div>
+        <ul>
+          <li><a href="http://japan.unity3d.com/blog/">Blog</a></li>
+          <li><a href="http://japan.unity3d.com/company/contact/">Contact</a></li>
+          <li><a href="http://japan.unity3d.com/company/legal">Legal</a></li>
+          <li><a href="http://japan.unity3d.com/company/legal/privacy-policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="social">
+        <a href="http://www.facebook.com/unity3d" class="icon facebook" target="_blank">Facebook</a>
+        <a href="http://www.twitter.com/unity_japan" class="icon twitter" target="_blank">Twitter</a>
+        <a href="https://plus.google.com/u/0/104568650392955941577/" class="icon googleplus" target="_blank">Google+</a>
+      </div>
+    </div>
+  </footer><!-- #EndLibraryItem --></section>
+  <input id="language" value="jp" type="hidden">
+</div>
+<div style="display: none;" class="overlay"></div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2854981-1']);
+  _gaq.push(['_setDomainName', 'unity3d.com']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['b._setAccount', 'UA-32967615-2']);
+  _gaq.push(['b._trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+</div></body></html>

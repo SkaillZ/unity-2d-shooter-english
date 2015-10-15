@@ -1,0 +1,52 @@
+div.background{height:320px;background:url(/resources/stylesheets/images/elements/backgrounds/hexagon-bg.png) 50% 0 repeat-y;}
+div.hero{height:152px;text-align:center;}
+div.hero img{display:inline-block;margin-top:15px;}
+section img{display:inline-block;}
+section section{zoom:1;margin:0 auto 5em;}
+section p{font-size:100%;line-height:1.8;}
+section.ss01{width:100%;text-align:center;color:#1B1310;margin:0 0 5em;padding:2em 0;}
+h2{font-weight:400;clear:both;line-height:1;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAADCAMAAACd425HAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF1djb////r/oYQQAAABVJREFUeNpiYGBkhCIGRgQbgQACDAABYAAVQ4LBSwAAAABJRU5ErkJggg==) left top repeat-y;color:#3F454A;margin:3em 0 .5em;padding:18px 0 15px 25px;}
+h3{font-weight:400;font-size:146.5%;clear:both;border-bottom:1px dotted #969EA6;color:#3F454A;margin:3em 0 2em;padding:0;}
+h3::before{content:'';display:block;clear:both;}
+div.box{border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;border:1px solid #CDD1D5;margin:2em 1em;padding:1em 2em;}
+div.box h3{font-size:146.5%;clear:both;border-bottom:1px dotted #969EA6;color:#3F454A;margin:.25em 0 .5em;padding:0;}
+.blue-btn{float:none;width:50%;margin:0 auto;}
+hr{width:100%;border:none;height:3px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAMAAABh9kWNAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF5eXl////4sXsSQAAAAJ0Uk5T/wDltzBKAAAAE0lEQVR42mJgYGRkAENGBoAAAwAAMAAHlCHwEgAAAABJRU5ErkJggg==);clear:both;margin:5em 0;}
+.fig12-17 .g4{position:relative;}
+.fancybox-title-float-wrap .child{line-height:1.5;text-align:left;position:absolute;top:-35px;left:10px;padding:15px;}
+aside{clear:both;background:#F7F7F8;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;margin:2em 0;padding:1em 2em;}
+aside h1{font-size:116%;font-weight:700;color:#3F454A;height:19px;line-height:19px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAGFBMVEXg4OK3ubyhpKfr7O2xtLago6b39/ibnqF3arZmAAAAbUlEQVR4XmXPsQqAMAwE0Fusaxf1P/wFQVfBoWtVyezQcr9vIy0q3pIHgXCBiG8YbRqQfWLKoKxUjMZjdze5eBwJbU8GjzqTQMccC0ca2RJn6P7mqeT4oyuc0RVavWtEVhI4MsO7w9Ps0/f54gKHiUhShpVbaAAAAABJRU5ErkJggg==) left top no-repeat;margin:.5em 0 0;padding:1px 0 10px 30px;}
+figure{text-align:center;position:relative;margin:0 0 2em 2em;}
+figure img{max-width:100%;max-height:400px;margin:0 auto;}
+figcaption{color:#3F454A;font-size:90%;}
+figcaption::before{content:'fig. ';font-size:85%;}
+.fig12-17 figcaption{clear:both;}
+.fig12-17{float:none;width:100%;clear:both;display:block;zoom:1;margin:2em 0 0;}
+nav.paging a { width: auto !important; min-width: 15em; }
+
+@media only screen and (max-width: 690px) and (min-width: 480px){
+
+	#content .g12 a{
+		width: 100%;
+	}
+
+}
+
+@font-face{
+    font-family: "Sam's Town";
+    src: url("../font/SAM_5C_27TRG_.TTF") format("truetype");
+}
+
+.sams {
+	padding-top: 40px;
+	line-height: 50px;
+}
+
+.sams a{
+    font-family: "Sam's Town";
+    text-decoration: none;
+    color: black;
+    outline: none;
+    font-size: 70px;
+    margin-top: 100px;
+}

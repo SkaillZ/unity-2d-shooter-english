@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html style="" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <!-- InstanceEndEditable -->
+  <link rel="shortcut icon" href="http://japan.unity3d.com/resources/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="http://japan.unity3d.com/resources/favicons/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon.png">
+
+  <!-- META -->
+  <meta name="description" content="Unity は、Windows と OS X 上で動作する統合型のゲーム開発環境です。iOS、Android、Windows、Mac OS X、Web、Wii U、PlayStation3、Xbox 360 など様々なプラットフォームへ向けた高度な 3D アプリケーションを制作することが出来ます。">
+  <meta name="author" content="Unity Technologies">
+  <meta property="og:title" content="Unity: 統合ゲーム開発環境">
+  <meta property="og:type" content="company">
+  <meta property="og:url" content="http://japan.unity3d.com/">
+  <meta property="og:image" content="http://japan.unity3d.com/resources/favicons/fb-icon.png">
+  <meta property="og:description" content="Unity は、スマートフォンや PC、Webブラウザ、コンシューマ機上でハイクオリティーなゲームを実現する開発プラットフォームです。">
+  <meta property="og:site_name" content="Unity Japan 公式サイト">
+
+  <!-- ASSETS -->
+  <script src="Moving%20the%20Player-Dateien/ga.js" async="" type="text/javascript"></script><script src="Moving%20the%20Player-Dateien/jquery_002.js" type="text/javascript"></script>
+  <script type="text/javascript" src="Moving%20the%20Player-Dateien/unity-core.js"></script>
+  <link rel="stylesheet" type="text/css" href="Moving%20the%20Player-Dateien/core.css">
+  <link rel="stylesheet" type="text/css" href="Moving%20the%20Player-Dateien/resp.css">
+  <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/resources/stylesheets/ie.css" /><![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://unity3d.com/news.rss">
+  <!-- InstanceBeginEditable name="header" -->
+    <script type="text/javascript" src="Moving%20the%20Player-Dateien/jquery.js"></script>
+  <!-- InstanceEndEditable -->
+  <link rel="stylesheet" type="text/css" href="Moving%20the%20Player-Dateien/index.css">
+  <link rel="stylesheet" type="text/css" href="Moving%20the%20Player-Dateien/jp.css">
+  <link rel="stylesheet" type="text/css" href="Moving%20the%20Player-Dateien/prettify.css">
+  <link rel="stylesheet" type="text/css" href="Moving%20the%20Player-Dateien/style.css">
+  <script type="text/javascript" src="Moving%20the%20Player-Dateien/prettify.js"></script>
+  
+  <script type="text/javascript">
+    function addClass(){
+        $(".source-code pre").addClass("prettyprint");
+    }
+  </script>
+  <title>Moving the Player</title>
+</head>
+<body class="developer-document" onload="addClass();prettyPrint()">
+  <div id="master-wrapper">
+  <div class="background"></div>
+  <header id="master-header" class="master-header" role="main-header">
+    <div class="header-wrapper">
+      <div class="lang">
+        <div class="lbl animate" data-values="lang-selector|width|105|1">言語を切り替え</div>
+        <div class="flag flag-jp current tt" data-distance="38|28|bottom"><div class="tip">日本語</div></div>
+        <div id="lang-selector" class="lang-selector">
+          <div class="flag flag-en tt" data-distance="38|28|bottom"><a href="http://unity3d.com/"></a><div class="tip">English</div></div>
+          <div class="flag flag-cn tt" data-distance="38|28|bottom"><a href="http://china.unity3d.com/"></a><div class="tip">中文</div></div>
+          <div class="flag flag-es tt" data-distance="38|28|bottom"><a href="http://spanish.unity3d.com/"></a><div class="tip">Español</div></div>
+          <div class="flag flag-kr tt" data-distance="38|28|bottom"><a href="http://www.unity3dkorea.com/"></a><div class="tip">한국어</div></div>
+          <div class="flag flag-pt tt" data-distance="38|28|bottom"><a href="http://portuguese.unity3d.com/"></a><div class="tip">Portugués</div></div>
+          <div class="flag flag-ru tt" data-distance="38|28|bottom"><a href="http://russia.unity3d.com/"></a><div class="tip">Pусский</div></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <nav class="top-nav">
+        <ul>
+          <li class="tn-icon"><a href="http://japan.unity3d.com/">Home</a></li>
+          <li class="tn-unity"><a href="http://japan.unity3d.com/unity">Unity</a></li>
+          <li class="tn-gallery"><a href="http://japan.unity3d.com/gallery">Gallery</a></li>
+          <li class="tn-store"><a href="http://japan.unity3d.com/store">Store</a></li>
+          <li class="tn-assetstore"><a href="http://japan.unity3d.com/asset-store">Asset Store</a></li>
+          <li class="tn-developer selected"><a href="http://japan.unity3d.com/developer">Developer</a></li>
+          <li class="tn-company"><a href="http://japan.unity3d.com/company">Company</a></li>
+          <li class="tn-download"><a href="http://japan.unity3d.com/unity/download">Download</a></li>
+        </ul>
+      </nav>
+      <nav class="sub-nav">
+        <ul id="sn-unity" style="display:none;">
+          <li class="sn-unity-workflow jp"><a href="http://japan.unity3d.com/unity/workflow">ワークフロー</a></li>
+          <li class="sn-unity-quality jp"><a href="http://japan.unity3d.com/unity/quality">クオリティー</a></li>
+          <li class="sn-unity-mecanim"><a href="http://japan.unity3d.com/unity/mecanim">Mecanim</a></li>
+          <li class="sn-unity-performance jp"><a href="http://japan.unity3d.com/unity/performance">パフォーマンス</a></li>
+          <li class="sn-unity-multiplatform jp"><a href="http://japan.unity3d.com/unity/multiplatform">マルチプラットフォーム</a></li>
+          <li class="sn-unity-collaboration jp"><a href="http://japan.unity3d.com/unity/collaboration">コラボレーション</a></li>
+          <li class="sn-unity-whatsnew jp"><a href="http://japan.unity3d.com/unity/whats-new">アップデート情報</a></li>
+        </ul>
+        <ul id="sn-gallery" style="display:none;">
+          <li class="sn-gallery-madewith"><a href="http://japan.unity3d.com/gallery/made-with-unity/game-list">Made With Unity</a></li>
+          <li class="sn-gallery-demos"><a href="http://japan.unity3d.com/gallery/demos">Demos By Unity</a></li>
+        </ul>
+        <ul id="sn-assetstore" style="display:none;">
+          <li class="sn-assetstore-browse"><a href="https://www.assetstore.unity3d.com/" target="_blank">ブラウズ</a></li>
+          <li class="sn-assetstore-onlineservices jp"><a href="http://japan.unity3d.com/asset-store/online-services">オンラインサービス</a></li>
+          <li class="sn-assetstore-submit jp"><a href="http://japan.unity3d.com/asset-store/submit-content">コンテンツ提出</a></li>
+        </ul>
+        <ul id="sn-developer">
+          <li class="sn-developer-document jp selected"><a href="http://japan.unity3d.com/developer/document">ドキュメント</a></li>
+          <li class="sn-developer-resource jp"><a href="http://japan.unity3d.com/developer/resource">リソース</a></li>
+        </ul>
+        <ul id="sn-community" style="display:none;">
+          <li class="sn-community-forum jp"><a href="http://forum.unity3d.com/" target="_blank">フォーラム</a></li>
+          <li class="sn-community-answers jp"><a href="http://answers.unity3d.com/" target="_blank">アンサー</a></li>
+          <li class="sn-community-feedback jp"><a href="http://feedback.unity3d.com/" target="_blank">フィードバック</a></li>
+        </ul>
+        <ul id="sn-company" style="display:none;">
+          <li class="sn-company-people jp"><a href="http://japan.unity3d.com/company/people">スタッフ</a></li>
+          <li class="sn-company-jobs jp"><a href="http://japan.unity3d.com/company/jobs/overview">採用情報</a></li>
+          <li class="sn-company-events jp"><a href="http://japan.unity3d.com/company/events">イベント</a></li>
+          <li class="sn-company-pr jp"><a href="http://japan.unity3d.com/company/public-relations">広報</a></li>
+          <li class="sn-company-union jp"><a href="http://japan.unity3d.com/company/union">Union</a></li>
+          <li class="sn-company-reseller jp"><a href="http://japan.unity3d.com/company/reseller">代理店</a></li>
+          <li class="sn-company-blog jp"><a href="http://japan.unity3d.com/blog">ブログ</a></li>
+          <li class="sn-company-access jp"><a href="http://japan.unity3d.com/company/access">アクセス</a></li>
+          <li class="sn-company-contact jp"><a href="http://japan.unity3d.com/company/contact">お問い合わせ</a></li>
+          <li class="sn-company-legal jp"><a href="http://japan.unity3d.com/company/legal">リーガル</a></li>
+        </ul>
+        <ul id="sn-unite" style="display:none;">
+          <li class="sn-unite-unite"><a href="http://japan.unity3d.com/unite/">Unite 2014</a></li>
+          <li class="sn-unite-archive"><a href="http://japan.unity3d.com/unite/archive">アーカイブ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="content-container" class="content-container">
+    <header class="mq-header clear">
+      <div class="mq-icon"><a href="http://japan.unity3d.com/developer/"></a></div>
+      <div class="mq-langbtn rel">
+        <div class="flag flag-jp"></div>
+        <div id="flag-list"></div>
+      </div>
+       <div class="mq-navbtn"><div class="icon-bar"></div><div class="icon-bar"></div><div class="icon-bar"></div></div>
+    </header>
+    <!-- InstanceBeginEditable name="main-content" -->
+      <div class="hero"><div class="sams"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/">Shooting Game</a></div></div>
+      <nav class="section-nav">
+        <div class="g12"><div class="wrap"><h2></h2>
+          <ul>
+            
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html">cp01</a></li>
+              
+              <li class="selected"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/02.html">cp02</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/03.html">cp03</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/04.html">cp04</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/05.html">cp05</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html">cp06</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/07.html">cp07</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/08.html">cp08</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/09.html">cp09</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/10.html">cp10</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/11.html">cp11</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/12.html">cp12</a></li>
+          <li class="top"></li></ul>
+        </div></div>
+      </nav>
+
+    <section id="content" class="content-wrapper gw clear 2d-shooting-game">
+
+
+      <!-- <nav class="quickjump shrink pos-fix" data-pos-fix-off-y="50">
+        <div class="header">
+          <h3>Quick jump:</h3>
+          <div class="clear"></div>
+        </div>
+        <ul class="simple">
+          <li><a href="#ss01">第 1 回　世界の「骨格」をつくろう</a></li>
+          <li><a href="#ss02">Unity を手に入れる</a></li>
+          <li><a href="#ss03">Unity の統合開発環境</a></li>
+          <li><a href="#ss04">必要なパーツを配置しよう</a></li>
+          <li><a href="#ss05">はじめてのスクリプト</a></li>
+          <li><a href="#ss06">まとめと次回のテーマ</a></li>
+          <li><a href="#ss07">プロジェクトファイルをダウンロード</a></li>
+        </ul>
+      </nav> -->
+
+<section class="content">
+
+       <article>
+        <div style="float:right"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game/game/02.html">日本語</a> | English</div>
+        <div class="clear"></div>
+      </article>
+
+
+    <h1><a id="h2"></a>Chapter 2. Moving the Player</h1>
+
+<h2><a id="h2-1"></a>2.1. Before You Start</h2>
+<div class="column">
+
+<h3><a id="column-6"></a>The Rigidbody2D Class</h3>
+<p>This class is necessary to take advantage of 2D physics. You can 
+control the object’s movement and the influence of gravity through this 
+class.</p>
+<p>For details, check out <a href="http://docs.unity3d.com/Documentation/ScriptReference/Rigidbody2D.html" class="link">Rigidbody2D</a> in the documentation.</p>
+</div>
+<div class="column">
+
+<h3><a id="column-7"></a>The Input Class</h3>
+<p>This class processes controller input from keyboards, joysticks, etc.
+ It can also access gyros and accelerometers in mobile devices.</p>
+<p>For details, check out <a href="http://docs.unity3d.com/Documentation/ScriptReference/Input.html" class="link">Input</a> in the documentation.</p>
+</div>
+<div class="column">
+
+<h3><a id="column-8"></a>“Attaching”</h3>
+<p>In this tutorial, you’ll be asked to “attach” things. This is the 
+process of adding a component to a game object, which you’ll do often.</p>
+
+<h4><a id="h2-1-0-1"></a>Example: Attaching Player.cs</h4>
+<p>Let’s add the Player script component to the game object. There are 3 main ways to add it:</p>
+<p>1. In the Hierarchy window, attach by dragging and dropping a script onto a game object.</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/script_attach_hierarchy.png" alt="Attaching a script via the Hierarchy window.">
+<p class="caption">
+Figure 2.1: Attaching a script via the Hierarchy window.
+</p>
+</div>
+<p>2. In the Inspector window, attach by dragging and dropping the script.</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/script_attach_inspector.png" alt="Attaching a script via the Inspector window.">
+<p class="caption">
+Figure 2.2: Attaching a script via the Inspector window.
+</p>
+</div>
+<p>3. In the Inspector window, attach by clicking “Add Component.”</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/script_attach_add_component.png" alt="Adding a component in the Inspector window.">
+<p class="caption">
+Figure 2.3: Adding a component in the Inspector window.
+</p>
+</div>
+</div>
+<p>Let's get to it, and make a playable character.</p>
+<p>We’ll make it so that the player responds to keyboard input. For this, <b>we must use the Input class in script</b>.</p>
+
+<h2><a id="h2-2"></a>2.2. Making Game Objects from Prefabs</h2>
+<p>Let's make a game object out of a prefab.</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/drag_prefab.png" alt="Drag the prefab into the scene.">
+<p class="caption">
+Figure 2.4: Drag the prefab into the scene.
+</p>
+</div>
+
+<h2><a id="h2-3"></a>2.3. Prepare the Player for Movement</h2>
+<p>Let's attach a <b>Rigidbody2D</b> to the Player game object we made in the previous chapter.</p>
+<p>For our purposes, we don’t need the effects of gravity, so in the Inspector, set <b>Gravity Scale</b> to <b>0</b> as shown in Figure 2.5.</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/rb2_gravity_zero.png" alt="The player game object’s Inspector.">
+<p class="caption">
+Figure 2.5: The player game object’s Inspector.
+</p>
+</div>
+<p>Look at the <b>Animator</b> component, which should already be attached. If <b>Apply Root Motion</b> is checked, uncheck it.</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/anim_root_motion.png" alt="">
+<p class="caption">
+Figure 2.6: 
+</p>
+</div>
+
+<h2><a id="h2-4"></a>2.4. Attach Scripts to the Player</h2>
+
+<h3><a id="h2-4-1"></a>Making a Script File</h3>
+<p>Let's make a script file. Select <tt class="inline-code">Assets -&gt; Create -&gt; C# Script</tt> and name it <b>Player</b>.</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/create_script.png" alt="Creating a new C# script.">
+<p class="caption">
+Figure 2.7: Creating a new C# script.
+</p>
+</div>
+<p>As shown in Figure 2.8, save the script to the <b>Scripts</b> folder.</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/create_player_cs.png" alt="The appropriate location for the Player script.">
+<p class="caption">
+Figure 2.8: The appropriate location for the Player script.
+</p>
+</div>
+
+<h3><a id="h2-4-2"></a>Writing The Script</h3>
+<p>Let's quickly add some code. Double-click the Player.cs file, and MonoDevelop will start up.</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/monodevelop.png" alt="">
+</div>
+<p>We will use <tt class="inline-code">Input.GetAxisRaw(string axisName)</tt> to link the arrow keys to the player movement.</p>
+<div class="column">
+
+<h3><a id="column-9"></a>Input.GetAxisRaw</h3>
+<p>When the left arrow is pressed, it will return -1, the right arrow 
+will return 1, and when nothing is pressed, the result is 0. Use this 
+only when you want to see if a keyboard key is pressed or not.</p>
+<p>You can use <tt class="inline-code">Input.GetAxis(string axisName)</tt> when you want to get continuous values between zero and one, like on an analog stick.</p>
+</div>
+<p>When the arrow keys are pressed, we set the player’s velocity vector by assigning to <b>rigidbody2D.velocity</b>.</p>
+<div class="column">
+
+<h3><a id="column-10"></a>Velocity Vector??</h3>
+<p>This represents movement speed and direction in a single Vector.</p>
+<p>This document provides more information on using vectors in Unity: <a href="http://docs.unity3d.com/Documentation/Manual/VectorCookbook.html" class="link">Vector Cookbook</a></p>
+</div>
+<p>Below is the code for Player.cs.</p>
+<div class="source-code">
+<p class="caption">Player.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">using</span><span class="pln"> </span><span class="typ">System</span><span class="pun">.</span><span class="typ">Collections</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Player</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Movement Speed</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> speed </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Update</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Right, Left</span><span class="pln">
+                </span><span class="kwd">float</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Input</span><span class="pun">.</span><span class="typ">GetAxisRaw</span><span class="pln"> </span><span class="pun">(</span><span class="str">"Horizontal"</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Up, Down</span><span class="pln">
+                </span><span class="kwd">float</span><span class="pln"> y </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Input</span><span class="pun">.</span><span class="typ">GetAxisRaw</span><span class="pln"> </span><span class="pun">(</span><span class="str">"Vertical"</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Get the direction of movement</span><span class="pln">
+                </span><span class="typ">Vector2</span><span class="pln"> direction </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Vector2</span><span class="pln"> </span><span class="pun">(</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">).</span><span class="pln">normalized</span><span class="pun">;</span><span class="pln">
+
+                </span><span class="com">// Assign the movement speed and direction</span><span class="pln">
+                rigidbody2D</span><span class="pun">.</span><span class="pln">velocity </span><span class="pun">=</span><span class="pln"> direction </span><span class="pun">*</span><span class="pln"> speed</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+
+<h3><a id="h2-4-3"></a>Attach the Script to the Player</h3>
+<p>Now attach the <tt class="inline-code">Player.cs</tt> script that you made to the Player. Drag and drop the script onto the Player game object.</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/script_attach_scene.png" alt="Attaching the script to the Player game object.">
+<p class="caption">
+Figure 2.9: Attaching the script to the Player game object.
+</p>
+</div>
+
+<h3><a id="h2-4-4"></a>Adjusting The Main Camera</h3>
+<p>Before we play the game and test the movement, let’s set up the camera. This controls the visible area of the game world.</p>
+<p>Set the Projection to <b>Orthographic</b>, and the Size to <b>3</b>.</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/main_camera.png" alt="The Main Camera Inspector.">
+<p class="caption">
+Figure 2.10: The Main Camera Inspector.
+</p>
+</div>
+
+<h3><a id="h2-4-5"></a>Save the Scene</h3>
+<p>Let's save the work we’ve done so far into a Scene.</p>
+<p>Make a <tt class="inline-code">Scenes</tt> folder, and select the <tt class="inline-code">"File → Save Scene"</tt> menu item.</p>
+<p>Set the scene name to <b>Stage</b>.</p>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/save_scene_menu.png" alt="The Save Scene menu item.">
+<p class="caption">
+Figure 2.11: The Save Scene menu item.
+</p>
+</div>
+<div class="image">
+<img src="Moving%20the%20Player-Dateien/saved_scene.png" alt="The saved Stage scene file.">
+<p class="caption">
+Figure 2.12: The saved Stage scene file.
+</p>
+</div>
+
+
+    
+      <h3>End of Chapter 02</h3>
+      <p>That’s all for this section. If you had problems, you can 
+download the example project up to this point, and start fresh on the 
+next chapter.</p>
+      <p></p><section class="ss12" id="ss12"><a class="blue-btn" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/project/02_ShootingGame.zip">Download This Chapter’s Project File</a></section><p></p>
+    
+
+</section>
+<!-- ページング -->
+<nav class="paging with-top">
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <a class="prev" rel="prev" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html">Chapter 01</a>
+  <a class="next" rel="next" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/03.html">Chapter 03</a>
+  
+</nav>
+Page last updated: 2014-04-25
+  
+</section>
+
+    <script type="text/javascript">
+      renderMenu('developer/document');
+      hljs.initHighlightingOnLoad();
+    </script>
+
+<!-- InstanceEndEditable --><!-- #BeginLibraryItem "/Library/footer-hd.lbi" --> <footer>
+    <div class="footer-wrapper clear">
+      <div class="left">
+        <div class="copy">Copyright ©2015 Unity Technologies Japan G.K. All Rights Reserved</div>
+        <ul>
+          <li><a href="http://japan.unity3d.com/blog/">Blog</a></li>
+          <li><a href="http://japan.unity3d.com/company/contact/">Contact</a></li>
+          <li><a href="http://japan.unity3d.com/company/legal">Legal</a></li>
+          <li><a href="http://japan.unity3d.com/company/legal/privacy-policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="social">
+        <a href="http://www.facebook.com/unity3d" class="icon facebook" target="_blank">Facebook</a>
+        <a href="http://www.twitter.com/unity_japan" class="icon twitter" target="_blank">Twitter</a>
+        <a href="https://plus.google.com/u/0/104568650392955941577/" class="icon googleplus" target="_blank">Google+</a>
+      </div>
+    </div>
+  </footer><!-- #EndLibraryItem --></section>
+  <input id="language" value="jp" type="hidden">
+</div>
+<div style="display: none;" class="overlay"></div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2854981-1']);
+  _gaq.push(['_setDomainName', 'unity3d.com']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['b._setAccount', 'UA-32967615-2']);
+  _gaq.push(['b._trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+</body></html>

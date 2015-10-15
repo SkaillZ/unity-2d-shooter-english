@@ -1,0 +1,428 @@
+<html xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- base href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html" --><style type="text/css">body { margin-left:0;margin-right:0;margin-top:0; }#google-cache-hdr {background:#f5f5f5 !important;font:13px arial,sans-serif !important;text-align:left !important;color:#202020 !important;border:0 !important;margin:0 !important;border-bottom:1px solid #cecece !important;line-height:16px !important ;padding:16px 28px 24px 28px !important;}#google-cache-hdr * {display:inline !important;font:inherit !important;text-align:inherit !important;color:inherit !important;line-height:inherit !important;background:none !important;border:0 !important;margin:0 !important;padding:0 !important;letter-spacing:0 !important;}#google-cache-hdr a {text-decoration:none !important;color:#1a0dab !important;}#google-cache-hdr a:hover { text-decoration:underline !important; }#google-cache-hdr a:visited { color:#609 !important; }#google-cache-hdr div { display:block !important;margin-top:4px !important; }#google-cache-hdr b {font-weight:bold !important;display:inline-block !important;direction:ltr !important;}</style></head><body class="developer-document" onload="addClass();prettyPrint()"><div id="google-cache-hdr" dir="ltr"><div>Dies ist der Cache von Google von <a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html" dir="ltr">http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html</a>. Es handelt sich dabei um ein Abbild der Seite, wie diese am 24. Sept. 2015 04:32:23 GMT angezeigt wurde. </div><div>Die <a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html" dir="ltr">aktuelle Seite</a> sieht mittlerweile eventuell anders aus. <a href="http://support.google.com/websearch/bin/answer.py?hl=de&amp;p=cached&amp;answer=1687222">Weitere Informationen</a></div><div></div><div><span style="display:inline-block !important;margin-top:8px !important;margin-right:104px !important;white-space:nowrap !important;"><span style="margin-right:28px !important;"><span style="font-weight:bold !important;">Vollständige Version</span></span><span style="margin-right:28px !important;"><a href="http://webcache.googleusercontent.com/search?q=cache:a70Rd5hCTEcJ:japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html&amp;hl=de&amp;gl=at&amp;strip=1&amp;vwsrc=0">Nur-Text-Version</a></span><span style="margin-right:28px !important;"><a href="http://webcache.googleusercontent.com/search?q=cache:a70Rd5hCTEcJ:japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html&amp;hl=de&amp;gl=at&amp;strip=0&amp;vwsrc=1">Quelle anzeigen</a></span></span><span style="display:inline-block !important;margin-top:8px !important;color:#717171 !important;">Tipp: Um Ihren Suchbegriff schnell auf dieser Seite zu finden, drücken Sie <b>Strg+F</b> bzw. <b>⌘-F</b> (Mac) und verwenden Sie die Suchleiste.</span></div></div><div style="position:relative;">
+
+
+
+
+   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <!-- InstanceEndEditable -->
+  <link rel="shortcut icon" href="http://japan.unity3d.com/resources/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="http://japan.unity3d.com/resources/favicons/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon.png">
+
+  <!-- META -->
+  <meta name="description" content="Unity は、Windows と OS X 上で動作する統合型のゲーム開発環境です。iOS、Android、Windows、Mac OS X、Web、Wii U、PlayStation3、Xbox 360 など様々なプラットフォームへ向けた高度な 3D アプリケーションを制作することが出来ます。">
+  <meta name="author" content="Unity Technologies">
+  <meta property="og:title" content="Unity: 統合ゲーム開発環境">
+  <meta property="og:type" content="company">
+  <meta property="og:url" content="http://japan.unity3d.com/">
+  <meta property="og:image" content="http://japan.unity3d.com/resources/favicons/fb-icon.png">
+  <meta property="og:description" content="Unity は、スマートフォンや PC、Webブラウザ、コンシューマ機上でハイクオリティーなゲームを実現する開発プラットフォームです。">
+  <meta property="og:site_name" content="Unity Japan 公式サイト">
+
+  <!-- ASSETS -->
+  <script src="Making%20the%20Background-Dateien/ga.js" async="" type="text/javascript"></script><script src="Making%20the%20Background-Dateien/jquery_002.js" type="text/javascript"></script>
+  <script type="text/javascript" src="Making%20the%20Background-Dateien/unity-core.js"></script>
+  <link rel="stylesheet" type="text/css" href="Making%20the%20Background-Dateien/core.css">
+  <link rel="stylesheet" type="text/css" href="Making%20the%20Background-Dateien/resp.css">
+  <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/resources/stylesheets/ie.css" /><![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://unity3d.com/news.rss">
+  <!-- InstanceBeginEditable name="header" -->
+    <script type="text/javascript" src="Making%20the%20Background-Dateien/jquery.js"></script>
+  <!-- InstanceEndEditable -->
+  <link rel="stylesheet" type="text/css" href="Making%20the%20Background-Dateien/index.css">
+  <link rel="stylesheet" type="text/css" href="Making%20the%20Background-Dateien/jp.css">
+  <link rel="stylesheet" type="text/css" href="Making%20the%20Background-Dateien/prettify.css">
+  <link rel="stylesheet" type="text/css" href="Making%20the%20Background-Dateien/style.css">
+  <script type="text/javascript" src="Making%20the%20Background-Dateien/prettify.js"></script>
+  
+  <script type="text/javascript">
+    function addClass(){
+        $(".source-code pre").addClass("prettyprint");
+    }
+  </script>
+  <title>Making the Background</title>
+
+
+  <div id="master-wrapper">
+  <div class="background"></div>
+  <header id="master-header" class="master-header" role="main-header">
+    <div class="header-wrapper">
+      <div class="lang">
+        <div class="lbl animate" data-values="lang-selector|width|105|1">言語を切り替え</div>
+        <div class="flag flag-jp current tt" data-distance="38|28|bottom"><div class="tip">日本語</div></div>
+        <div id="lang-selector" class="lang-selector">
+          <div class="flag flag-en tt" data-distance="38|28|bottom"><a href="http://unity3d.com/"></a><div class="tip">English</div></div>
+          <div class="flag flag-cn tt" data-distance="38|28|bottom"><a href="http://china.unity3d.com/"></a><div class="tip">中文</div></div>
+          <div class="flag flag-es tt" data-distance="38|28|bottom"><a href="http://spanish.unity3d.com/"></a><div class="tip">Español</div></div>
+          <div class="flag flag-kr tt" data-distance="38|28|bottom"><a href="http://www.unity3dkorea.com/"></a><div class="tip">한국어</div></div>
+          <div class="flag flag-pt tt" data-distance="38|28|bottom"><a href="http://portuguese.unity3d.com/"></a><div class="tip">Portugués</div></div>
+          <div class="flag flag-ru tt" data-distance="38|28|bottom"><a href="http://russia.unity3d.com/"></a><div class="tip">Pусский</div></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <nav class="top-nav">
+        <ul>
+          <li class="tn-icon"><a href="http://japan.unity3d.com/">Home</a></li>
+          <li class="tn-unity"><a href="http://japan.unity3d.com/unity">Unity</a></li>
+          <li class="tn-gallery"><a href="http://japan.unity3d.com/gallery">Gallery</a></li>
+          <li class="tn-store"><a href="http://japan.unity3d.com/store">Store</a></li>
+          <li class="tn-assetstore"><a href="http://japan.unity3d.com/asset-store">Asset Store</a></li>
+          <li class="tn-developer selected"><a href="http://japan.unity3d.com/developer">Developer</a></li>
+          <li class="tn-company"><a href="http://japan.unity3d.com/company">Company</a></li>
+          <li class="tn-download"><a href="http://japan.unity3d.com/unity/download">Download</a></li>
+        </ul>
+      </nav>
+      <nav class="sub-nav">
+        <ul id="sn-unity" style="display:none;">
+          <li class="sn-unity-workflow jp"><a href="http://japan.unity3d.com/unity/workflow">ワークフロー</a></li>
+          <li class="sn-unity-quality jp"><a href="http://japan.unity3d.com/unity/quality">クオリティー</a></li>
+          <li class="sn-unity-mecanim"><a href="http://japan.unity3d.com/unity/mecanim">Mecanim</a></li>
+          <li class="sn-unity-performance jp"><a href="http://japan.unity3d.com/unity/performance">パフォーマンス</a></li>
+          <li class="sn-unity-multiplatform jp"><a href="http://japan.unity3d.com/unity/multiplatform">マルチプラットフォーム</a></li>
+          <li class="sn-unity-collaboration jp"><a href="http://japan.unity3d.com/unity/collaboration">コラボレーション</a></li>
+          <li class="sn-unity-whatsnew jp"><a href="http://japan.unity3d.com/unity/whats-new">アップデート情報</a></li>
+        </ul>
+        <ul id="sn-gallery" style="display:none;">
+          <li class="sn-gallery-madewith"><a href="http://japan.unity3d.com/gallery/made-with-unity/game-list">Made With Unity</a></li>
+          <li class="sn-gallery-demos"><a href="http://japan.unity3d.com/gallery/demos">Demos By Unity</a></li>
+        </ul>
+        <ul id="sn-assetstore" style="display:none;">
+          <li class="sn-assetstore-browse"><a href="https://www.assetstore.unity3d.com/" target="_blank">ブラウズ</a></li>
+          <li class="sn-assetstore-onlineservices jp"><a href="http://japan.unity3d.com/asset-store/online-services">オンラインサービス</a></li>
+          <li class="sn-assetstore-submit jp"><a href="http://japan.unity3d.com/asset-store/submit-content">コンテンツ提出</a></li>
+        </ul>
+        <ul id="sn-developer">
+          <li class="sn-developer-document jp selected"><a href="http://japan.unity3d.com/developer/document">ドキュメント</a></li>
+          <li class="sn-developer-resource jp"><a href="http://japan.unity3d.com/developer/resource">リソース</a></li>
+        </ul>
+        <ul id="sn-community" style="display:none;">
+          <li class="sn-community-forum jp"><a href="http://forum.unity3d.com/" target="_blank">フォーラム</a></li>
+          <li class="sn-community-answers jp"><a href="http://answers.unity3d.com/" target="_blank">アンサー</a></li>
+          <li class="sn-community-feedback jp"><a href="http://feedback.unity3d.com/" target="_blank">フィードバック</a></li>
+        </ul>
+        <ul id="sn-company" style="display:none;">
+          <li class="sn-company-people jp"><a href="http://japan.unity3d.com/company/people">スタッフ</a></li>
+          <li class="sn-company-jobs jp"><a href="http://japan.unity3d.com/company/jobs/overview">採用情報</a></li>
+          <li class="sn-company-events jp"><a href="http://japan.unity3d.com/company/events">イベント</a></li>
+          <li class="sn-company-pr jp"><a href="http://japan.unity3d.com/company/public-relations">広報</a></li>
+          <li class="sn-company-union jp"><a href="http://japan.unity3d.com/company/union">Union</a></li>
+          <li class="sn-company-reseller jp"><a href="http://japan.unity3d.com/company/reseller">代理店</a></li>
+          <li class="sn-company-blog jp"><a href="http://japan.unity3d.com/blog">ブログ</a></li>
+          <li class="sn-company-access jp"><a href="http://japan.unity3d.com/company/access">アクセス</a></li>
+          <li class="sn-company-contact jp"><a href="http://japan.unity3d.com/company/contact">お問い合わせ</a></li>
+          <li class="sn-company-legal jp"><a href="http://japan.unity3d.com/company/legal">リーガル</a></li>
+        </ul>
+        <ul id="sn-unite" style="display:none;">
+          <li class="sn-unite-unite"><a href="http://japan.unity3d.com/unite/">Unite 2014</a></li>
+          <li class="sn-unite-archive"><a href="http://japan.unity3d.com/unite/archive">アーカイブ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="content-container" class="content-container">
+    <header class="mq-header clear">
+      <div class="mq-icon"><a href="http://japan.unity3d.com/developer/"></a></div>
+      <div class="mq-langbtn rel">
+        <div class="flag flag-jp"></div>
+        <div id="flag-list"></div>
+      </div>
+       <div class="mq-navbtn"><div class="icon-bar"></div><div class="icon-bar"></div><div class="icon-bar"></div></div>
+    </header>
+    <!-- InstanceBeginEditable name="main-content" -->
+      <div class="hero"><div class="sams"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/">Shooting Game</a></div></div>
+      <nav class="section-nav nav-stuck">
+        <div class="g12"><div class="wrap"><h2></h2>
+          <ul>
+            
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html">cp01</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/02.html">cp02</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/03.html">cp03</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/04.html">cp04</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/05.html">cp05</a></li>
+              
+              <li class="selected"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html">cp06</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/07.html">cp07</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/08.html">cp08</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/09.html">cp09</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/10.html">cp10</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/11.html">cp11</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/12.html">cp12</a></li>
+          <li class="top"></li></ul>
+        </div></div>
+      </nav>
+
+    <section id="content" class="content-wrapper gw clear 2d-shooting-game">
+
+
+      <!-- <nav class="quickjump shrink pos-fix" data-pos-fix-off-y="50">
+        <div class="header">
+          <h3>Quick jump:</h3>
+          <div class="clear"></div>
+        </div>
+        <ul class="simple">
+          <li><a href="#ss01">第 1 回　世界の「骨格」をつくろう</a></li>
+          <li><a href="#ss02">Unity を手に入れる</a></li>
+          <li><a href="#ss03">Unity の統合開発環境</a></li>
+          <li><a href="#ss04">必要なパーツを配置しよう</a></li>
+          <li><a href="#ss05">はじめてのスクリプト</a></li>
+          <li><a href="#ss06">まとめと次回のテーマ</a></li>
+          <li><a href="#ss07">プロジェクトファイルをダウンロード</a></li>
+        </ul>
+      </nav> -->
+
+<section class="content">
+
+       <article>
+        <div style="float:right"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game/game/06.html">日本語</a> | English</div>
+        <div class="clear"></div>
+      </article>
+
+
+    <h1><a id="h6"></a>Chapter 6. Making the Background</h1>
+<p>In the last chapter, we used layers for collision detection and animation events.</p>
+<p>Now, we’re going to make a background for the game screen.</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/background_1.png" alt="">
+</div>
+<p>In a nutshell, this is the process for making the background:</p>
+<div class="emlistnum-code">
+<pre class="emlist"> 1:  Make 3 separate images for the background.
+ 2:  Make the background scroll.
+ 3:  Each image will individually scroll at different speeds (to simulate parallax)
+</pre>
+</div>
+
+<h2><a id="h6-1"></a>6.1. Displaying the Three Images</h2>
+<p>For our background, we’ll apply a texture to a Quad.</p>
+<p>First, make an empty game object, and name it <b>Backgrounds</b>.</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/create_backgrounds.png" alt="">
+</div>
+
+<h2><a id="h6-2"></a>6.2. Make the Front</h2>
+<p>Next, make a Quad by selecting the “GameObject -&gt; Create -&gt; 
+Quad” menu item. Name it Front, and make it a child of Backgrounds.</p>
+<p>Set the Transform of both Backgrounds and Front to be <b>X 0 Y 0 Z 0</b>.</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/create_backgrounds_front.png" alt="">
+</div>
+<p>Let’s change the size of Front. Set its <b>Scale to X 8 Y 6 Z 1</b>.</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/change_front_scale.png" alt="">
+</div>
+<p>From the Materials folder, drag and drop <b>Background-Front</b> onto the Quad.</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/drag_front_material.png" alt="">
+</div>
+<p>After dragging, does the background fill the screen, like in Figure 6.1?</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/changed_front_scale.png" alt="">
+<p class="caption">
+Figure 6.1: 
+</p>
+</div>
+<div class="column">
+
+<h3><a id="column-24"></a>If Your Image Does Not Fill The Screen</h3>
+<p>It’s possible you forgot to set up the Main Camera.</p>
+<p>Check to make sure your 、<b>Projection</b> and <b>Size</b> settings match those in the image.</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/main_camera.png" alt="">
+</div>
+</div>
+
+<h2><a id="h6-3"></a>6.3. Make the Middle and Back</h2>
+<p>Duplicate Front, and name the objects Middle and Back.</p>
+<p></p><div style="display:flex"><p></p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/duplicate_front.png" alt="" width="90%">
+</div>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/created_middle_and_back.png" alt="" width="90%">
+</div>
+<p></p></div><p></p>
+<p>Next, change the materials for Middle and Back. Drag the 
+corresponding materials onto the appropriate items in the Hierarchy 
+view.</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/drag_middle_and_back_material.png" alt="">
+</div>
+
+<h2><a id="h6-4"></a>6.4. Adjust the Three Images’ Positions</h2>
+<p>Set the Front Z position to 0.1, the Middle Z position to 0.2, and the Back Z position to 0.3.</p>
+<p></p><div style="display:flex"><p></p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/front_position.png" alt="" width="95%">
+</div>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/middle_position.png" alt="" width="95%">
+</div>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/back_position.png" alt="" width="95%">
+</div>
+<p></p></div><p></p>
+<p>Now each image should display correctly.</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/background_2.png" alt="">
+</div>
+
+<h2><a id="h6-5"></a>6.5. Making the Background Scroll</h2>
+<p>Create Background.cs in the Scripts folder.</p>
+<div class="source-code">
+<p class="caption">Background.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Background</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Scrolling Speed</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> speed </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0.1f</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Update</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Y will go from 0 to 1 as time goes on. When the Y value is 1, it will return to 0.</span><span class="pln">
+                </span><span class="kwd">float</span><span class="pln"> y </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Mathf</span><span class="pun">.</span><span class="typ">Repeat</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Time</span><span class="pun">.</span><span class="pln">time </span><span class="pun">*</span><span class="pln"> speed</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Make an offset value for the Y value</span><span class="pln">
+                </span><span class="typ">Vector2</span><span class="pln"> offset </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Vector2</span><span class="pln"> </span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Set the material offset.</span><span class="pln">
+                renderer</span><span class="pun">.</span><span class="pln">sharedMaterial</span><span class="pun">.</span><span class="typ">SetTextureOffset</span><span class="pln"> </span><span class="pun">(</span><span class="str">"_MainTex"</span><span class="pun">,</span><span class="pln"> offset</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<p>Attach Background.cs to each of Front, Middle and Back.</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/attach_background.png" alt="">
+</div>
+<p>Next, to make the texture scrollable, make sure to set the Texture’s Wrap Mode to Repeat.</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/check_repeat.png" alt="">
+</div>
+<p>Play the game to check your work. The background should scroll.</p>
+<p>Let's try and change the scroll speed of each layer.</p>
+<p>Set the Front’s Speed to 0.1, the Middle’s Speed to 0.08, and the Back’s Speed to 0.02.</p>
+<p></p><div style="display:flex"><p></p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/front_speed.png" alt="Front" width="95%">
+<p class="caption">
+Figure 6.2: Front
+</p>
+</div>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/middle_speed.png" alt="Middle" width="95%">
+<p class="caption">
+Figure 6.3: Middle
+</p>
+</div>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/back_speed.png" alt="Back" width="95%">
+<p class="caption">
+Figure 6.4: Back
+</p>
+</div>
+<p></p></div><p></p>
+<p>Start the game and see what happens. Each background layer should scroll at different rates.</p>
+<div class="column">
+
+<h3><a id="column-25"></a>Sprites Cannot Change Their Offset</h3>
+<p>There’s a reason we didn’t use Sprites for the background.</p>
+<p>When a Texture is used as a Sprite, its offset cannot be changed.</p>
+<div class="image">
+<img src="Making%20the%20Background-Dateien/sprite_offset.png" alt="A warning pointing out that offsets are not compatible with sprites.">
+<p class="caption">
+Figure 6.5: A warning pointing out that offsets are not compatible with sprites.
+</p>
+</div>
+</div>
+
+
+    
+      <h3>End of Chapter 06</h3>
+      <p>That’s all for this section. If you had problems, you can 
+download the example project up to this point, and start fresh on the 
+next chapter.</p>
+      <p></p><section class="ss12" id="ss12"><a class="blue-btn" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/project/06_ShootingGame.zip">Download This Chapter’s Project File</a></section><p></p>
+    
+
+</section>
+<!-- ページング -->
+<nav class="paging with-top">
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <a class="prev" rel="prev" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/05.html">Chapter 05</a>
+  <a class="next" rel="next" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/07.html">Chapter 07</a>
+  
+</nav>
+Page last updated: 2014-04-25
+  
+</section>
+
+    <script type="text/javascript">
+      renderMenu('developer/document');
+      hljs.initHighlightingOnLoad();
+    </script>
+
+<!-- InstanceEndEditable --><!-- #BeginLibraryItem "/Library/footer-hd.lbi" --> <footer>
+    <div class="footer-wrapper clear">
+      <div class="left">
+        <div class="copy">Copyright ©2015 Unity Technologies Japan G.K. All Rights Reserved</div>
+        <ul>
+          <li><a href="http://japan.unity3d.com/blog/">Blog</a></li>
+          <li><a href="http://japan.unity3d.com/company/contact/">Contact</a></li>
+          <li><a href="http://japan.unity3d.com/company/legal">Legal</a></li>
+          <li><a href="http://japan.unity3d.com/company/legal/privacy-policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="social">
+        <a href="http://www.facebook.com/unity3d" class="icon facebook" target="_blank">Facebook</a>
+        <a href="http://www.twitter.com/unity_japan" class="icon twitter" target="_blank">Twitter</a>
+        <a href="https://plus.google.com/u/0/104568650392955941577/" class="icon googleplus" target="_blank">Google+</a>
+      </div>
+    </div>
+  </footer><!-- #EndLibraryItem --></section>
+  <input id="language" value="jp" type="hidden">
+</div>
+<div class="overlay"></div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2854981-1']);
+  _gaq.push(['_setDomainName', 'unity3d.com']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['b._setAccount', 'UA-32967615-2']);
+  _gaq.push(['b._trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+</div></body></html>

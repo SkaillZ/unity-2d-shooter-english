@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html style="" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <!-- InstanceEndEditable -->
+  <link rel="shortcut icon" href="http://japan.unity3d.com/resources/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="http://japan.unity3d.com/resources/favicons/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" href="http://japan.unity3d.com/resources/favicons/apple-touch-icon.png">
+
+  <!-- META -->
+  <meta name="description" content="Unity は、Windows と OS X 上で動作する統合型のゲーム開発環境です。iOS、Android、Windows、Mac OS X、Web、Wii U、PlayStation3、Xbox 360 など様々なプラットフォームへ向けた高度な 3D アプリケーションを制作することが出来ます。">
+  <meta name="author" content="Unity Technologies">
+  <meta property="og:title" content="Unity: 統合ゲーム開発環境">
+  <meta property="og:type" content="company">
+  <meta property="og:url" content="http://japan.unity3d.com/">
+  <meta property="og:image" content="http://japan.unity3d.com/resources/favicons/fb-icon.png">
+  <meta property="og:description" content="Unity は、スマートフォンや PC、Webブラウザ、コンシューマ機上でハイクオリティーなゲームを実現する開発プラットフォームです。">
+  <meta property="og:site_name" content="Unity Japan 公式サイト">
+
+  <!-- ASSETS -->
+  <script src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/ga.js" async="" type="text/javascript"></script><script src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/jquery_002.js" type="text/javascript"></script>
+  <script type="text/javascript" src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/unity-core.js"></script>
+  <link rel="stylesheet" type="text/css" href="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/core.css">
+  <link rel="stylesheet" type="text/css" href="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/resp.css">
+  <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/resources/stylesheets/ie.css" /><![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://unity3d.com/news.rss">
+  <!-- InstanceBeginEditable name="header" -->
+    <script type="text/javascript" src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/jquery.js"></script>
+  <!-- InstanceEndEditable -->
+  <link rel="stylesheet" type="text/css" href="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/index.css">
+  <link rel="stylesheet" type="text/css" href="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/jp.css">
+  <link rel="stylesheet" type="text/css" href="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/prettify.css">
+  <link rel="stylesheet" type="text/css" href="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/style.css">
+  <script type="text/javascript" src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/prettify.js"></script>
+  
+  <script type="text/javascript">
+    function addClass(){
+        $(".source-code pre").addClass("prettyprint");
+    }
+  </script>
+  <title>Collision Detection, Animation Events and Layers</title>
+</head>
+<body class="developer-document" onload="addClass();prettyPrint()">
+  <div id="master-wrapper">
+  <div class="background"></div>
+  <header id="master-header" class="master-header" role="main-header">
+    <div class="header-wrapper">
+      <div class="lang">
+        <div class="lbl animate" data-values="lang-selector|width|105|1">言語を切り替え</div>
+        <div class="flag flag-jp current tt" data-distance="38|28|bottom"><div class="tip">日本語</div></div>
+        <div id="lang-selector" class="lang-selector">
+          <div class="flag flag-en tt" data-distance="38|28|bottom"><a href="http://unity3d.com/"></a><div class="tip">English</div></div>
+          <div class="flag flag-cn tt" data-distance="38|28|bottom"><a href="http://china.unity3d.com/"></a><div class="tip">中文</div></div>
+          <div class="flag flag-es tt" data-distance="38|28|bottom"><a href="http://spanish.unity3d.com/"></a><div class="tip">Español</div></div>
+          <div class="flag flag-kr tt" data-distance="38|28|bottom"><a href="http://www.unity3dkorea.com/"></a><div class="tip">한국어</div></div>
+          <div class="flag flag-pt tt" data-distance="38|28|bottom"><a href="http://portuguese.unity3d.com/"></a><div class="tip">Portugués</div></div>
+          <div class="flag flag-ru tt" data-distance="38|28|bottom"><a href="http://russia.unity3d.com/"></a><div class="tip">Pусский</div></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <nav class="top-nav">
+        <ul>
+          <li class="tn-icon"><a href="http://japan.unity3d.com/">Home</a></li>
+          <li class="tn-unity"><a href="http://japan.unity3d.com/unity">Unity</a></li>
+          <li class="tn-gallery"><a href="http://japan.unity3d.com/gallery">Gallery</a></li>
+          <li class="tn-store"><a href="http://japan.unity3d.com/store">Store</a></li>
+          <li class="tn-assetstore"><a href="http://japan.unity3d.com/asset-store">Asset Store</a></li>
+          <li class="tn-developer selected"><a href="http://japan.unity3d.com/developer">Developer</a></li>
+          <li class="tn-company"><a href="http://japan.unity3d.com/company">Company</a></li>
+          <li class="tn-download"><a href="http://japan.unity3d.com/unity/download">Download</a></li>
+        </ul>
+      </nav>
+      <nav class="sub-nav">
+        <ul id="sn-unity" style="display:none;">
+          <li class="sn-unity-workflow jp"><a href="http://japan.unity3d.com/unity/workflow">ワークフロー</a></li>
+          <li class="sn-unity-quality jp"><a href="http://japan.unity3d.com/unity/quality">クオリティー</a></li>
+          <li class="sn-unity-mecanim"><a href="http://japan.unity3d.com/unity/mecanim">Mecanim</a></li>
+          <li class="sn-unity-performance jp"><a href="http://japan.unity3d.com/unity/performance">パフォーマンス</a></li>
+          <li class="sn-unity-multiplatform jp"><a href="http://japan.unity3d.com/unity/multiplatform">マルチプラットフォーム</a></li>
+          <li class="sn-unity-collaboration jp"><a href="http://japan.unity3d.com/unity/collaboration">コラボレーション</a></li>
+          <li class="sn-unity-whatsnew jp"><a href="http://japan.unity3d.com/unity/whats-new">アップデート情報</a></li>
+        </ul>
+        <ul id="sn-gallery" style="display:none;">
+          <li class="sn-gallery-madewith"><a href="http://japan.unity3d.com/gallery/made-with-unity/game-list">Made With Unity</a></li>
+          <li class="sn-gallery-demos"><a href="http://japan.unity3d.com/gallery/demos">Demos By Unity</a></li>
+        </ul>
+        <ul id="sn-assetstore" style="display:none;">
+          <li class="sn-assetstore-browse"><a href="https://www.assetstore.unity3d.com/" target="_blank">ブラウズ</a></li>
+          <li class="sn-assetstore-onlineservices jp"><a href="http://japan.unity3d.com/asset-store/online-services">オンラインサービス</a></li>
+          <li class="sn-assetstore-submit jp"><a href="http://japan.unity3d.com/asset-store/submit-content">コンテンツ提出</a></li>
+        </ul>
+        <ul id="sn-developer">
+          <li class="sn-developer-document jp selected"><a href="http://japan.unity3d.com/developer/document">ドキュメント</a></li>
+          <li class="sn-developer-resource jp"><a href="http://japan.unity3d.com/developer/resource">リソース</a></li>
+        </ul>
+        <ul id="sn-community" style="display:none;">
+          <li class="sn-community-forum jp"><a href="http://forum.unity3d.com/" target="_blank">フォーラム</a></li>
+          <li class="sn-community-answers jp"><a href="http://answers.unity3d.com/" target="_blank">アンサー</a></li>
+          <li class="sn-community-feedback jp"><a href="http://feedback.unity3d.com/" target="_blank">フィードバック</a></li>
+        </ul>
+        <ul id="sn-company" style="display:none;">
+          <li class="sn-company-people jp"><a href="http://japan.unity3d.com/company/people">スタッフ</a></li>
+          <li class="sn-company-jobs jp"><a href="http://japan.unity3d.com/company/jobs/overview">採用情報</a></li>
+          <li class="sn-company-events jp"><a href="http://japan.unity3d.com/company/events">イベント</a></li>
+          <li class="sn-company-pr jp"><a href="http://japan.unity3d.com/company/public-relations">広報</a></li>
+          <li class="sn-company-union jp"><a href="http://japan.unity3d.com/company/union">Union</a></li>
+          <li class="sn-company-reseller jp"><a href="http://japan.unity3d.com/company/reseller">代理店</a></li>
+          <li class="sn-company-blog jp"><a href="http://japan.unity3d.com/blog">ブログ</a></li>
+          <li class="sn-company-access jp"><a href="http://japan.unity3d.com/company/access">アクセス</a></li>
+          <li class="sn-company-contact jp"><a href="http://japan.unity3d.com/company/contact">お問い合わせ</a></li>
+          <li class="sn-company-legal jp"><a href="http://japan.unity3d.com/company/legal">リーガル</a></li>
+        </ul>
+        <ul id="sn-unite" style="display:none;">
+          <li class="sn-unite-unite"><a href="http://japan.unity3d.com/unite/">Unite 2014</a></li>
+          <li class="sn-unite-archive"><a href="http://japan.unity3d.com/unite/archive">アーカイブ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="content-container" class="content-container">
+    <header class="mq-header clear">
+      <div class="mq-icon"><a href="http://japan.unity3d.com/developer/"></a></div>
+      <div class="mq-langbtn rel">
+        <div class="flag flag-jp"></div>
+        <div id="flag-list"></div>
+      </div>
+       <div class="mq-navbtn"><div class="icon-bar"></div><div class="icon-bar"></div><div class="icon-bar"></div></div>
+    </header>
+    <!-- InstanceBeginEditable name="main-content" -->
+      <div class="hero"><div class="sams"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/">Shooting Game</a></div></div>
+      <nav class="section-nav">
+        <div class="g12"><div class="wrap"><h2></h2>
+          <ul>
+            
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/01.html">cp01</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/02.html">cp02</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/03.html">cp03</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/04.html">cp04</a></li>
+              
+              <li class="selected"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/05.html">cp05</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html">cp06</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/07.html">cp07</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/08.html">cp08</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/09.html">cp09</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/10.html">cp10</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/11.html">cp11</a></li>
+              
+              <li><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/12.html">cp12</a></li>
+          <li class="top"></li></ul>
+        </div></div>
+      </nav>
+
+    <section id="content" class="content-wrapper gw clear 2d-shooting-game">
+
+
+      <!-- <nav class="quickjump shrink pos-fix" data-pos-fix-off-y="50">
+        <div class="header">
+          <h3>Quick jump:</h3>
+          <div class="clear"></div>
+        </div>
+        <ul class="simple">
+          <li><a href="#ss01">第 1 回　世界の「骨格」をつくろう</a></li>
+          <li><a href="#ss02">Unity を手に入れる</a></li>
+          <li><a href="#ss03">Unity の統合開発環境</a></li>
+          <li><a href="#ss04">必要なパーツを配置しよう</a></li>
+          <li><a href="#ss05">はじめてのスクリプト</a></li>
+          <li><a href="#ss06">まとめと次回のテーマ</a></li>
+          <li><a href="#ss07">プロジェクトファイルをダウンロード</a></li>
+        </ul>
+      </nav> -->
+
+<section class="content">
+
+       <article>
+        <div style="float:right"><a href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game/game/05.html">日本語</a> | English</div>
+        <div class="clear"></div>
+      </article>
+
+
+    <h1><a id="h5"></a>Chapter 5. Collision Detection, Animation Events and Layers</h1>
+<p>The basic rule of shooters is “don’t get hit by bullets,” so for that we have collision detection.</p>
+<p>Unity provides the Collider component for collision detection.</p>
+<div class="column">
+
+<h3><a id="column-16"></a>Collider</h3>
+<p>The Collider and Rigidbody components depend heavily on one another 
+for physics simulation. Rigidbodies allow physically-realistic movement 
+while Colliders can detect collisions between objects.</p>
+<p>For more details, see Physics <a href="http://docs.unity3d.com/Documentation/Components/comp-DynamicsGroup.html" class="link">Physics Components</a> in the documentation.</p>
+</div>
+
+<h2><a id="h5-1"></a>5.1. Adding Collision Detection to the Player</h2>
+<p>Attach a <b>Box Collider 2D</b> to the Player.</p>
+<p>By setting the <b>Size to X 0.02 Y 0.02</b>, the collidable area is restricted to about one pixel.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/attached_box_collider2d.png" alt="The collidable area of the player.">
+<p class="caption">
+Figure 5.1: The collidable area of the player.
+</p>
+</div>
+
+<h3><a id="h5-1-1"></a>Make It A Trigger</h3>
+<p>Now turn the Player into a Trigger. On the Box Collider 2D, check the <b>Is Trigger</b> box.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/is_trigger_player.png" alt="Now the player’s Box Collider 2D is a trigger.">
+<p class="caption">
+Figure 5.2: Now the player’s Box Collider 2D is a trigger.
+</p>
+</div>
+<div class="column">
+
+<h3><a id="column-17"></a>Trigger</h3>
+<p>Normally, colliders will repel one another. When this is unwanted, or
+ not needed, use a Trigger. Simply check the Is Trigger box to make this
+ happen. Like the name implies, triggers can be used to “trigger” other 
+events to happen in your game.</p>
+</div>
+
+<h2><a id="h5-2"></a>5.2. Enemy Collision Detection</h2>
+<p>Attach a <b>Polygon Collider 2D</b> to the Enemy. You’ll see that the collider is much larger than the enemy, which will make the game play awkwardly.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/default_polygon_collider2D.png" alt="The original bounds of our collider.">
+<p class="caption">
+Figure 5.3: The original bounds of our collider.
+</p>
+</div>
+<div class="column">
+
+<h3><a id="column-18"></a>Mesh-based Collider Shapes in Polygon Collider 2D</h3>
+<p>By default, colliders are mesh-based. The mesh shape can be altered in Texture Import Settings.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/sprite_mesh.png" alt="Setting Texture Type to Advanced, we can use MeshType or Extrude Edges. ">
+<p class="caption">
+Figure 5.4: Setting Texture Type to Advanced, we can use MeshType or Extrude Edges. 
+</p>
+</div>
+</div>
+<p>Now let’s edit the shape of the collider. While holding shift, you can edit its points.</p>
+<div class="column">
+
+<h3><a id="column-19"></a>Editing a Polygon Collider 2D</h3>
+
+<h4><a id="h5-2-0-1"></a>Preparations Before Editing</h4>
+<p>We’re going to edit the shape of the collider, but it’s possible to accidentally resize or move the sprite itself.</p>
+<p>This is because when both the Transform and Collider edit handles are
+ visible at once, they occupy roughly the same space. So, let’s disable 
+just the Transform controls.</p>
+<p>To hide the transform controls, close the ▼ on the Sprite Renderer component.</p>
+<p>Click this to close.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/open_sprite_renderer.png" alt="When the Sprite Renderer’s details are opened, the Transform controls are visible and active.">
+<p class="caption">
+Figure 5.5: When the Sprite Renderer’s details are opened, the Transform controls are visible and active.
+</p>
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/custom_polygon_collider2D_2.png" alt="Now with the Sprite Renderer’s details closed, the Transform controls go away.">
+<p class="caption">
+Figure 5.6: Now with the Sprite Renderer’s details closed, the Transform controls go away.
+</p>
+</div>
+
+<h4><a id="h5-2-0-2"></a>How to Edit</h4>
+<p>You can edit colliders while holding down the shift key. Hold shift, 
+and place your mouse along the green lines. Green handles will appear at
+ the corners, which you can click and drag around.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/edit_polygon_colider2D.png" alt="Moving a green collider handle.">
+<p class="caption">
+Figure 5.7: Moving a green collider handle.
+</p>
+</div>
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/custom_polygon_collider2D_1.png" alt="The collider, having been edited to be smaller.">
+<p class="caption">
+Figure 5.8: The collider, having been edited to be smaller.
+</p>
+</div>
+
+<h3><a id="h5-2-1"></a>Make It A Trigger</h3>
+<p>Let’s make the enemy a trigger. Check the <b>Is Trigger</b> box on the <b>Polygon Collider 2D</b>.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/enemy_is_trigger.png" alt="The enemy with Is Trigger checked.">
+<p class="caption">
+Figure 5.9: The enemy with Is Trigger checked.
+</p>
+</div>
+
+<h2><a id="h5-3"></a>5.3. Bullet Collision Detection</h2>
+
+<h3><a id="h5-3-1"></a>Attach Colliders</h3>
+<p>Attach a <b>Polygon Collider 2D</b> to each PlayerBullet, and a <b>Circle Collider 2D</b> to the EnemyBullet.</p>
+<p>Set the Circle Collider 2D to have a <b>Radius of 0.07</b>, so it’s about the same size as the sprite.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/collider-bullets.png" alt="The desired Polygon and Circle Colliders.">
+<p class="caption">
+Figure 5.10: The desired Polygon and Circle Colliders.
+</p>
+</div>
+<p>It can be troublesome to make the same Collider shape over and over again, so to save time you can use <b>Copy Component</b> followed by <b>Paste Component Values</b>.</p>
+<div class="column">
+
+<h3><a id="column-20"></a>Copying Components</h3>
+<p>As in Figure 5.11, when you  right-click a component’s name, or click the gear icon next to it, a menu appears.</p>
+<p>This menu provides various functions specific to components.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/copy_component.png" alt="">
+<p class="caption">
+Figure 5.11: 
+</p>
+</div>
+<p></p><div style="display:flex"><p></p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/paste_component_as_new.png" alt="Adding a component with the same internal values." width="90%">
+<p class="caption">
+Figure 5.12: Adding a component with the same internal values.
+</p>
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/paste_component_values.png" alt="Making two components have the same values." width="90%">
+<p class="caption">
+Figure 5.13: Making two components have the same values.
+</p>
+</div>
+<p></p></div><p></p>
+</div>
+
+<h3><a id="h5-3-2"></a>Make It A Trigger</h3>
+<p>Let's make the collider a trigger. Check the <b>Is Trigger</b> box on both PlayerBullets’ and the EnemyBullet’s collider components.</p>
+<p></p><div style="display:flex"><p></p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/is_trigger_polygon.png" alt="" width="90%">
+<p class="caption">
+Figure 5.14: 
+</p>
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/is_trigger_circle.png" alt="" width="90%">
+<p class="caption">
+Figure 5.15: 
+</p>
+</div>
+<p></p></div><p></p>
+<p>Now, you can update all the bullet prefabs, and delete the bullets you’ve made in the scene.</p>
+
+<h2><a id="h5-4"></a>5.4. Detecting Collisions In Script</h2>
+<p>To detect trigger collisions from a script, three methods are provided: OnTriggerEnter2D, OnTriggerStay2D, and OnTriggerExit2D.</p>
+<p>Now let's implement the rule “explode whenever something hits the player.”</p>
+<p>First, let’s look at the code needed in <b>Spaceship.cs</b> to make an Explosion game object.</p>
+<div class="source-code">
+<p class="caption">Spaceship.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+
+</span><span class="pun">[</span><span class="typ">RequireComponent</span><span class="pun">(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="typ">Rigidbody2D</span><span class="pun">))]</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Spaceship</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Movement Speed</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> speed</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Bullet Firing Delay</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> shotDelay</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Bullet Prefab</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">GameObject</span><span class="pln"> bullet</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Whether bullets can be fired</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">bool</span><span class="pln"> canShot</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Explosion Prefab</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">GameObject</span><span class="pln"> explosion</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Make an explosion</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Explosion</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="typ">Instantiate</span><span class="pln"> </span><span class="pun">(</span><span class="pln">explosion</span><span class="pun">,</span><span class="pln"> transform</span><span class="pun">.</span><span class="pln">position</span><span class="pun">,</span><span class="pln"> transform</span><span class="pun">.</span><span class="pln">rotation</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="com">// Fire a bullet</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Shot</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Transform</span><span class="pln"> origin</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="typ">Instantiate</span><span class="pln"> </span><span class="pun">(</span><span class="pln">bullet</span><span class="pun">,</span><span class="pln"> origin</span><span class="pun">.</span><span class="pln">position</span><span class="pun">,</span><span class="pln"> origin</span><span class="pun">.</span><span class="pln">rotation</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="com">// Move the ship</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Move</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Vector2</span><span class="pln"> direction</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                rigidbody2D</span><span class="pun">.</span><span class="pln">velocity </span><span class="pun">=</span><span class="pln"> direction </span><span class="pun">*</span><span class="pln"> speed</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<p>For each Player and Enemy objects, assign the Explosion prefab to the the new slot in the Spaceship component.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/spaceship_explosion.png" alt="Assigning the Explosion prefab to the Spaceship component.">
+<p class="caption">
+Figure 5.16: Assigning the Explosion prefab to the Spaceship component.
+</p>
+</div>
+<p>We also need to add code to handle collisions in the Player class.</p>
+<div class="source-code">
+<p class="caption">Player.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">using</span><span class="pln"> </span><span class="typ">System</span><span class="pun">.</span><span class="typ">Collections</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Player</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Spaceship Component</span><span class="pln">
+        </span><span class="typ">Spaceship</span><span class="pln"> spaceship</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="typ">IEnumerator</span><span class="pln"> </span><span class="typ">Start</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Get the Spaceship component</span><span class="pln">
+                spaceship </span><span class="pun">=</span><span class="pln"> </span><span class="typ">GetComponent</span><span class="pun">&lt;</span><span class="typ">Spaceship</span><span class="pun">&gt;</span><span class="pln"> </span><span class="pun">();</span><span class="pln">
+
+                </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+                        </span><span class="com">// Make a bullet with the player’s position/rotation</span><span class="pln">
+                        spaceship</span><span class="pun">.</span><span class="typ">Shot</span><span class="pln"> </span><span class="pun">(</span><span class="pln">transform</span><span class="pun">);</span><span class="pln">
+
+                        </span><span class="com">// Wait for shotDelay seconds.</span><span class="pln">
+                        </span><span class="kwd">yield</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">WaitForSeconds</span><span class="pln"> </span><span class="pun">(</span><span class="pln">spaceship</span><span class="pun">.</span><span class="pln">shotDelay</span><span class="pun">);</span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Update</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Right, Left</span><span class="pln">
+                </span><span class="kwd">float</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Input</span><span class="pun">.</span><span class="typ">GetAxisRaw</span><span class="pln"> </span><span class="pun">(</span><span class="str">"Horizontal"</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Up, Down</span><span class="pln">
+                </span><span class="kwd">float</span><span class="pln"> y </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Input</span><span class="pun">.</span><span class="typ">GetAxisRaw</span><span class="pln"> </span><span class="pun">(</span><span class="str">"Vertical"</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Get the facing direction</span><span class="pln">
+                </span><span class="typ">Vector2</span><span class="pln"> direction </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Vector2</span><span class="pln"> </span><span class="pun">(</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">).</span><span class="pln">normalized</span><span class="pun">;</span><span class="pln">
+
+                </span><span class="com">// Move</span><span class="pln">
+                spaceship</span><span class="pun">.</span><span class="typ">Move</span><span class="pln"> </span><span class="pun">(</span><span class="pln">direction</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="com">// Called at the moment a collision happens</span><span class="pln">
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">OnTriggerEnter2D</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Collider2D</span><span class="pln"> c</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Delete the bullet</span><span class="pln">
+                </span><span class="typ">Destroy</span><span class="pun">(</span><span class="pln">c</span><span class="pun">.</span><span class="pln">gameObject</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Delete the player</span><span class="pln">
+                spaceship</span><span class="pun">.</span><span class="typ">Explosion</span><span class="pun">();</span><span class="pln">
+
+                </span><span class="com">// Explode</span><span class="pln">
+                </span><span class="typ">Destroy</span><span class="pln"> </span><span class="pun">(</span><span class="pln">gameObject</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<p>At this point, play the game and see what happens.</p>
+<p>The enemy’s bullets will cause an explosion on impact, but then the explosion just repeats endlessly.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/explode_forever.png" alt="">
+</div>
+
+<h2><a id="h5-5"></a>5.5. Controlling the Explosion</h2>
+
+<h3><a id="h5-5-1"></a>Animation Loop Settings</h3>
+<p>Select the <b>Explode</b> animation, and uncheck the Loop Time box in the Inspector.</p>
+<p>This will make the explosion animation play only a single time.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/loop_time.png" alt="">
+</div>
+
+<h2><a id="h5-6"></a>5.6. Delete the Game Object After the Explosion</h2>
+<p>Although we’ve stopped the animation from looping, the game object will remain indefinitely.</p>
+<p>We can delete this game object by calling the <b>Destroy</b> function in script after the animation has completed.</p>
+<p>Make an Explosion.cs script, and attach it to the Explosion prefab.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/attach_explosion_script.png" alt="">
+</div>
+<div class="source-code">
+<p class="caption">Explosion.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Explosion</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">OnAnimationFinish</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="typ">Destroy</span><span class="pln"> </span><span class="pun">(</span><span class="pln">gameObject</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+
+<h3><a id="h5-6-1"></a>Animation Events</h3>
+<p>After the animation completes, the OnAnimationFinish method of <b>Explosion.cs</b> will be called.</p>
+<p>Select the “Window -&gt; Animation” menu item to bring up the Animation view.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/menu_animation.png" alt="">
+</div>
+<p>By dragging the tab of the Animation view, you can move it around, and include it with other tabs.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/drag_animation_tab.png" alt="">
+</div>
+<p>Next drag the Explosion prefab into the scene, which will make a game object.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/drag_explosion_prefab.png" alt="">
+</div>
+<p>Select the Explosion game object only, and see that the Animation view displays information about the Explode animation.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/select_explosion_gameobject.png" alt="">
+</div>
+<p>Add an AnimationEvent. As in Figure 5.17, add an event.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/add_animation_event.png" alt="">
+<p class="caption">
+Figure 5.17: 
+</p>
+</div>
+<div class="code">
+<p class="caption">List 5.1: </p>
+<pre class="list"> 1: Click “Add Event”
+ 2: Drag to this position
+ 3: Select “OnAnimationFinish()”
+</pre>
+</div>
+<p>Once the event is added, delete the Explosion game object.</p>
+<p>Play the game and see that after the explosion, the game object is deleted.</p>
+
+<h2><a id="h5-7"></a>5.7. Making a Destroy Area for Enemies and Bullets</h2>
+<p>As the game currently is, enemies and bullets will fly endlessly, even after they leave the screen.</p>
+<p>So, let’s set some bounds past which bullets and enemies will be deleted.</p>
+<p>Make an empty game object, name it <b>DestroyArea</b> and attach a <b>Box Collider 2D</b> to it.</p>
+<p>Check the Is Trigger box, and set the <b>Size to X 9 Y 7</b>.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/create_destroyarea.png" alt="The new DestroyArea game object.">
+<p class="caption">
+Figure 5.18: The new DestroyArea game object.
+</p>
+</div>
+<p>Now we can set up this DestroyArea to delete bullets that move outside of it.</p>
+<p>Make <b>DestroyArea.cs</b>, and attach it to the DestroyArea.</p>
+<div class="source-code">
+<p class="caption">DestroyArea.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">DestroyArea</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">OnTriggerExit2D</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Collider2D</span><span class="pln"> c</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="typ">Destroy</span><span class="pln"> </span><span class="pun">(</span><span class="pln">c</span><span class="pun">.</span><span class="pln">gameObject</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/attach_destroyarea_script.png" alt="">
+</div>
+<p>Play the game and confim that it works.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/bad_play_destroyarea.png" alt="">
+<p class="caption">
+Figure 5.19: 
+</p>
+</div>
+<p>But, As soon as play begins, the player explodes!</p>
+<div class="column">
+
+<h3><a id="column-21"></a>Why The Player Explodes</h3>
+<p>Quite simply, it’s because the <b>OnTriggerEnter2D</b> method in <b>Player.cs</b> is being called.</p>
+<p>This topic can get a little difficult but basically, even when a game object starts inside a collider, it will have <b>OnTriggerEnter2D</b> called.</p>
+</div>
+<p>One way to solve this issue is by using Layers.</p>
+
+<h3><a id="h5-7-1"></a>Using Layers to Control Collisions</h3>
+<p>Colliders are used for collision detection between game objects, but 
+you don’t necessarily need information about all collision events all 
+the time. Specifically, in this shooting game,  the following events 
+should not happen:</p>
+<div class="emlistnum-code">
+<pre class="emlist"> 1: The player should not collide with its own bullets
+ 2: Enemies should not collide with any enemy’s bullets
+ 3: The player’s bullets should not collide with the enemies’ bullets
+ 4: The player’s bullets should not collide with one another
+ 5: The enemies’ bullets should not collide with one another.
+ 6: Enemies should not collide with one another.
+ 7: Players cannot collide with Players.
+</pre>
+</div>
+<p>The easiest way to apply these restrictions is by using layers to control collision detection.</p>
+
+<h4><a id="h5-7-1-1"></a>Layer Settings</h4>
+<p>To use layers, first you have to register them. Select the “Edit -&gt; Project Settings -&gt; Tags and Layers” menu item.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/tag_and_layers.png" alt="">
+<p class="caption">
+Figure 5.20: 
+</p>
+</div>
+<div class="column">
+
+<h3><a id="column-22"></a>Layer</h3>
+<p>Layers are often used to set up restrictions between objects. We’ll 
+use it for collision detection, but camera rendering, lighting, and many
+ other things can use Layers.</p>
+<p>For details, see <a href="http://docs.unity3d.com/Documentation/Components/Layers.html" class="link">Layers</a> in the documentation.</p>
+</div>
+<p>We’ll set up 6 layers for this project:</p>
+<div class="emlistnum-code">
+<pre class="emlist"> 1:  Player
+ 2:  Enemy
+ 3:  Bullet (Player)
+ 4:  Bullet (Enemy)
+ 5:  DestroyArea
+</pre>
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/layer_list.png" alt="">
+<p class="caption">
+Figure 5.21: 
+</p>
+</div>
+
+<h4><a id="h5-7-1-2"></a>Controlling Collision Detection With Layers　　</h4>
+<p>Let's use those layers we just made in our collision detection 
+system. Select the “Edit -&gt; Project Settings -&gt; Physics 2D” menu 
+item.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/physics2D.png" alt="">
+<p class="caption">
+Figure 5.22: 
+</p>
+</div>
+<p>Using the <b>Layer Collision Matrix</b>, you can decide whether each 
+layer will collide with the others. By default, everything is checked; 
+change it so that it matches the configuration in Figure 5.23.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/layer_collision_matrix.png" alt="Unchecked boxes mean that those two layers will not produce collision events.">
+<p class="caption">
+Figure 5.23: Unchecked boxes mean that those two layers will not produce collision events.
+</p>
+</div>
+<p>Now set the various game objects and prefabs to match the image below.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/layer_destroyarea.png" alt="">
+</div>
+<div class="column">
+
+<h3><a id="column-23"></a>Apply Settings to Children as Well</h3>
+<p>When you change the settings of a parent object, you can apply those 
+settings to its children. A dialog like the one in Figure 5.24 will be 
+presented.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/apply_all.png" alt="Dialog for changing the layer of child objects">
+<p class="caption">
+Figure 5.24: Dialog for changing the layer of child objects
+</p>
+</div>
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/layer_enemy.png" alt="">
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/layer_enemy_bullet.png" alt="">
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/layer_player.png" alt="">
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/layer_player_bullet.png" alt="">
+</div>
+
+<h3><a id="h5-7-2"></a>Controlling Layers In Script</h3>
+<p>Using the <b>Layer Collision Matrix</b>, you can control collision detection to a certain extent.</p>
+<p>But now, we want to ignore collisions at specific times, like when the player is exploding.</p>
+
+<h4><a id="h5-7-2-1"></a>When entering the DestroyArea, we want OnTriggerExit2D to be called, but we don’t want OnTriggerEnter2D!</h4>
+<p>Let's look at a way to take care of this in script.</p>
+<p>We can get Layer info out of a game object. We’ll use a script 
+function to get the settings from the Tags and Layers section of the 
+Project Settings.</p>
+<p>One thing to keep in mind is that the player can collide with both enemies, and enemy bullets.</p>
+<div class="source-code">
+<p class="caption">Player.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">using</span><span class="pln"> </span><span class="typ">System</span><span class="pun">.</span><span class="typ">Collections</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Player</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Spaceship Component</span><span class="pln">
+        </span><span class="typ">Spaceship</span><span class="pln"> spaceship</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="typ">IEnumerator</span><span class="pln"> </span><span class="typ">Start</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Get the Spaceship component</span><span class="pln">
+                spaceship </span><span class="pun">=</span><span class="pln"> </span><span class="typ">GetComponent</span><span class="pun">&lt;</span><span class="typ">Spaceship</span><span class="pun">&gt;</span><span class="pln"> </span><span class="pun">();</span><span class="pln">
+
+                </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+                        </span><span class="com">// Make a bullet with the player’s position/rotation</span><span class="pln">
+                        spaceship</span><span class="pun">.</span><span class="typ">Shot</span><span class="pln"> </span><span class="pun">(</span><span class="pln">transform</span><span class="pun">);</span><span class="pln">
+
+                        </span><span class="com">// Wait for shotDelay seconds.</span><span class="pln">
+                        </span><span class="kwd">yield</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">WaitForSeconds</span><span class="pln"> </span><span class="pun">(</span><span class="pln">spaceship</span><span class="pun">.</span><span class="pln">shotDelay</span><span class="pun">);</span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Update</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Right, Left</span><span class="pln">
+                </span><span class="kwd">float</span><span class="pln"> x </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Input</span><span class="pun">.</span><span class="typ">GetAxisRaw</span><span class="pln"> </span><span class="pun">(</span><span class="str">"Horizontal"</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Up, Down</span><span class="pln">
+                </span><span class="kwd">float</span><span class="pln"> y </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Input</span><span class="pun">.</span><span class="typ">GetAxisRaw</span><span class="pln"> </span><span class="pun">(</span><span class="str">"Vertical"</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Get the facing direction</span><span class="pln">
+                </span><span class="typ">Vector2</span><span class="pln"> direction </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Vector2</span><span class="pln"> </span><span class="pun">(</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">).</span><span class="pln">normalized</span><span class="pun">;</span><span class="pln">
+
+                </span><span class="com">// Move</span><span class="pln">
+                spaceship</span><span class="pun">.</span><span class="typ">Move</span><span class="pln"> </span><span class="pun">(</span><span class="pln">direction</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="com">// Called at the moment a collision happens</span><span class="pln">
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">OnTriggerEnter2D</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Collider2D</span><span class="pln"> c</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Get the Layer name</span><span class="pln">
+                </span><span class="kwd">string</span><span class="pln"> layerName </span><span class="pun">=</span><span class="pln"> </span><span class="typ">LayerMask</span><span class="pun">.</span><span class="typ">LayerToName</span><span class="pun">(</span><span class="pln">c</span><span class="pun">.</span><span class="pln">gameObject</span><span class="pun">.</span><span class="pln">layer</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Delete the bullet, if it’s in the “Bullet (Enemy)” layer</span><span class="pln">
+                </span><span class="kwd">if</span><span class="pun">(</span><span class="pln"> layerName </span><span class="pun">==</span><span class="pln"> </span><span class="str">"Bullet (Enemy)"</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">{</span><span class="pln">
+                        </span><span class="com">// Delete the bullet</span><span class="pln">
+                        </span><span class="typ">Destroy</span><span class="pun">(</span><span class="pln">c</span><span class="pun">.</span><span class="pln">gameObject</span><span class="pun">);</span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+
+                </span><span class="com">// Create an explosion if the layer is “Bullet (Enemy)” or “Enemy”</span><span class="pln">
+                </span><span class="kwd">if</span><span class="pun">(</span><span class="pln"> layerName </span><span class="pun">==</span><span class="pln"> </span><span class="str">"Bullet (Enemy)"</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> layerName </span><span class="pun">==</span><span class="pln"> </span><span class="str">"Enemy"</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">{</span><span class="pln">
+                        </span><span class="com">// Explode</span><span class="pln">
+                        spaceship</span><span class="pun">.</span><span class="typ">Explosion</span><span class="pun">();</span><span class="pln">
+
+                        </span><span class="com">// Delete the player</span><span class="pln">
+                        </span><span class="typ">Destroy</span><span class="pln"> </span><span class="pun">(</span><span class="pln">gameObject</span><span class="pun">);</span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<p>Once that’s set up, play the game. Now, the player won’t be deleted straightaway.</p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/good_play_destroyarea.png" alt="">
+<p class="caption">
+Figure 5.25: 
+</p>
+</div>
+
+<h3><a id="h5-7-3"></a>Enemy Collision Detection</h3>
+<p>The enemies should explode on contact with the player’s bullets, and at the same time be deleted.</p>
+<p>Like the player’s code for handling DestroyArea, we can call 
+spaceship.Explosion() to create an explosion animation from its prefab.</p>
+<p>We'll also delete the enemy using Destroy.</p>
+<div class="source-code">
+<p class="caption">Enemy.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">using</span><span class="pln"> </span><span class="typ">System</span><span class="pun">.</span><span class="typ">Collections</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Enemy</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Spaceship Component</span><span class="pln">
+        </span><span class="typ">Spaceship</span><span class="pln"> spaceship</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="typ">IEnumerator</span><span class="pln"> </span><span class="typ">Start</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+
+                </span><span class="com">// Get the Spaceship component</span><span class="pln">
+                spaceship </span><span class="pun">=</span><span class="pln"> </span><span class="typ">GetComponent</span><span class="pun">&lt;</span><span class="typ">Spaceship</span><span class="pun">&gt;</span><span class="pln"> </span><span class="pun">();</span><span class="pln">
+
+                </span><span class="com">// Move in the negative direction of the Y-Axis</span><span class="pln">
+                spaceship</span><span class="pun">.</span><span class="typ">Move</span><span class="pln"> </span><span class="pun">(</span><span class="pln">transform</span><span class="pun">.</span><span class="pln">up </span><span class="pun">*</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// If canShot is false, end the coroutine here.</span><span class="pln">
+                </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">spaceship</span><span class="pun">.</span><span class="pln">canShot </span><span class="pun">==</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                        </span><span class="kwd">yield</span><span class="pln"> </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+
+                </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+                        </span><span class="com">// Get the child objects</span><span class="pln">
+                        </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> transform</span><span class="pun">.</span><span class="pln">childCount</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+                                </span><span class="typ">Transform</span><span class="pln"> shotPosition </span><span class="pun">=</span><span class="pln"> transform</span><span class="pun">.</span><span class="typ">GetChild</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);</span><span class="pln">
+
+                                </span><span class="com">// Fire a bullet at shotPosition’s position/rotation.</span><span class="pln">
+                                spaceship</span><span class="pun">.</span><span class="typ">Shot</span><span class="pln"> </span><span class="pun">(</span><span class="pln">shotPosition</span><span class="pun">);</span><span class="pln">
+                        </span><span class="pun">}</span><span class="pln">
+
+                        </span><span class="com">// Wait for shotDelay seconds.</span><span class="pln">
+                        </span><span class="kwd">yield</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">WaitForSeconds</span><span class="pln"> </span><span class="pun">(</span><span class="pln">spaceship</span><span class="pun">.</span><span class="pln">shotDelay</span><span class="pun">);</span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">OnTriggerEnter2D</span><span class="pln"> </span><span class="pun">(</span><span class="typ">Collider2D</span><span class="pln"> c</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Get the Layer name</span><span class="pln">
+                </span><span class="kwd">string</span><span class="pln"> layerName </span><span class="pun">=</span><span class="pln"> </span><span class="typ">LayerMask</span><span class="pun">.</span><span class="typ">LayerToName</span><span class="pun">(</span><span class="pln">c</span><span class="pun">.</span><span class="pln">gameObject</span><span class="pun">.</span><span class="pln">layer</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Return immediately if the layer is not “Bullet (Player)”</span><span class="pln">
+                </span><span class="kwd">if</span><span class="pun">(</span><span class="pln"> layerName </span><span class="pun">!=</span><span class="pln"> </span><span class="str">"Bullet (Player)"</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">return</span><span class="pun">;</span><span class="pln">
+
+                </span><span class="com">// Delete the bullet</span><span class="pln">
+                </span><span class="typ">Destroy</span><span class="pun">(</span><span class="pln">c</span><span class="pun">.</span><span class="pln">gameObject</span><span class="pun">);</span><span class="pln">
+
+                </span><span class="com">// Explode</span><span class="pln">
+                spaceship</span><span class="pun">.</span><span class="typ">Explosion</span><span class="pun">();</span><span class="pln">
+
+                </span><span class="com">// Delete the enemy</span><span class="pln">
+                </span><span class="typ">Destroy</span><span class="pun">(</span><span class="pln">gameObject</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<p>Play the game and see if it works.</p>
+<p>How does it look so far?</p>
+<p></p><div style="display:flex"><p></p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/end_1.png" alt="The player, being destroyed by an enemy bullet" width="90%">
+<p class="caption">
+Figure 5.26: The player, being destroyed by an enemy bullet
+</p>
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/end_2.png" alt="The enemy, being destroyed by a player’s bullet" width="90%">
+<p class="caption">
+Figure 5.27: The enemy, being destroyed by a player’s bullet
+</p>
+</div>
+<p></p></div><p></p>
+
+<h2><a id="h5-8"></a>5.8. Deleting the PlayerBullet Game Objects</h2>
+<p>We're deleting the Bullet game objects, but not the parent 
+PlayerBullet objects. We have to delete PlayerBullet too, or garbage 
+bullets will keep being fired endlessly.</p>
+<p>There’s several ways to do this, but since the PlayerBullet doesn’t 
+really affect other game objects, the easiest way would be to wait n 
+seconds, then delete the object.</p>
+<div class="source-code">
+<p class="caption">Bullet.cs</p>
+<pre style="" class="source prettyprint prettyprinted"><span class="kwd">using</span><span class="pln"> </span><span class="typ">UnityEngine</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Bullet</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">MonoBehaviour</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Bullet Movement Speed</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> speed </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// Time from game object creation, until deletion</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">float</span><span class="pln"> lifeTime </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Start</span><span class="pln"> </span><span class="pun">()</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Move along the local Y-Axis</span><span class="pln">
+                rigidbody2D</span><span class="pun">.</span><span class="pln">velocity </span><span class="pun">=</span><span class="pln"> transform</span><span class="pun">.</span><span class="pln">up</span><span class="pun">.</span><span class="pln">normalized </span><span class="pun">*</span><span class="pln"> speed</span><span class="pun">;</span><span class="pln">
+
+                </span><span class="com">// After lifeTime seconds, delete the object.</span><span class="pln">
+                </span><span class="typ">Destroy</span><span class="pln"> </span><span class="pun">(</span><span class="pln">gameObject</span><span class="pun">,</span><span class="pln"> lifeTime</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+</div>
+<p>PlayerBullet should be deleted after 1 second, and EnemyBullet should be deleted after 5 seconds.</p>
+<p></p><div style="display:flex"><p></p>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/bullet_lifetime_playerbullet.png" alt="" width="90%">
+</div>
+<div class="image">
+<img src="Collision%20Detection,%20Animation%20Events%20and%20Layers-Dateien/bullet_lifetime_enemybullet.png" alt="" width="90%">
+</div>
+<p></p></div><p></p>
+
+
+    
+      <h3>End of Chapter 05</h3>
+      <p>That’s all for this section. If you had problems, you can 
+download the example project up to this point, and start fresh on the 
+next chapter.</p>
+      <p></p><section class="ss12" id="ss12"><a class="blue-btn" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/project/05_ShootingGame.zip">Download This Chapter’s Project File</a></section><p></p>
+    
+
+</section>
+<!-- ページング -->
+<nav class="paging with-top">
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <a class="prev" rel="prev" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/04.html">Chapter 04</a>
+  <a class="next" rel="next" href="http://japan.unity3d.com/developer/document/tutorial/2d-shooting-game-en/game/06.html">Chapter 06</a>
+  
+</nav>
+Page last updated: 2014-05-14
+  
+</section>
+
+    <script type="text/javascript">
+      renderMenu('developer/document');
+      hljs.initHighlightingOnLoad();
+    </script>
+
+<!-- InstanceEndEditable --><!-- #BeginLibraryItem "/Library/footer-hd.lbi" --> <footer>
+    <div class="footer-wrapper clear">
+      <div class="left">
+        <div class="copy">Copyright ©2015 Unity Technologies Japan G.K. All Rights Reserved</div>
+        <ul>
+          <li><a href="http://japan.unity3d.com/blog/">Blog</a></li>
+          <li><a href="http://japan.unity3d.com/company/contact/">Contact</a></li>
+          <li><a href="http://japan.unity3d.com/company/legal">Legal</a></li>
+          <li><a href="http://japan.unity3d.com/company/legal/privacy-policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="social">
+        <a href="http://www.facebook.com/unity3d" class="icon facebook" target="_blank">Facebook</a>
+        <a href="http://www.twitter.com/unity_japan" class="icon twitter" target="_blank">Twitter</a>
+        <a href="https://plus.google.com/u/0/104568650392955941577/" class="icon googleplus" target="_blank">Google+</a>
+      </div>
+    </div>
+  </footer><!-- #EndLibraryItem --></section>
+  <input id="language" value="jp" type="hidden">
+</div>
+<div class="overlay"></div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2854981-1']);
+  _gaq.push(['_setDomainName', 'unity3d.com']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['b._setAccount', 'UA-32967615-2']);
+  _gaq.push(['b._trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+</body></html>
